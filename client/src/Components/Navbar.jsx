@@ -11,7 +11,14 @@ function Navbar() {
 
       <div>
         <ul className='nav-menu'>
-          <li></li>
+          <li>Home</li>
+          <li>About</li>
+          <li>Blog</li>
+          <li>Serve</li>
+          <li>Give</li>
+          <li>Divisions</li>
+          <li>Contact</li>
+          <li>Shop</li>
         </ul>
       </div>
     </div>
