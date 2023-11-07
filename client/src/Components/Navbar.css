@@ -1,16 +1,43 @@
-.navbar {
-    display: flex;
-    justify-content: space-around;
-    padding: 16px;
-    box-shadow: 0 1px 3px -2px black;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
 
-.navbar-logo {
+nav {
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.navbar-logo p {
-    color: #171717;
+.icon-menu li{
+    display: inline-block;
+    list-style: none;
+    margin-right: 100px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.nav-menu li{
+    display: inline-block;
+    list-style: none;
+    margin: -5px 81px -5px;
+    position: relative;
+    font-size: 18px;
+}
+
+.logo {
+    margin-left: 40px;
+    margin-top: 5px;
+}
+
+hr {
+    width: 90.8%;
+    margin: 40px;
+    height: 4px;
+    background: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
