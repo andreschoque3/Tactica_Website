@@ -15,29 +15,52 @@ nav {
 .icon-menu li{
     display: inline-block;
     list-style: none;
-    margin-right: 100px;
+    margin-right: 25px;
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .nav-menu li{
     display: inline-block;
     list-style: none;
-    margin: -5px 81px -5px;
+    margin: 10px 85px -5px;
     position: relative;
     font-size: 18px;
 }
 
-.logo {
+.logo-top {
     margin-left: 40px;
     margin-top: 5px;
 }
 
-hr {
-    width: 90.8%;
+.navbar-line{
+    width: 94.5%;
     margin: 40px;
     height: 4px;
     background: black;
-    margin-top: 5px;
+    margin-top: 15px;
     margin-bottom: 5px;
+}
+
+.nav-menu li::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+.menu li:hover::after {
+    width: 100%;
+}
+
+nav .fa-circle-xmark {
+    display: none;
+}
+
+.fa-bars {
+    display: none;
 }
