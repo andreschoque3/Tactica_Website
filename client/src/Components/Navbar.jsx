@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Styles/Navbar.css'
 import logo from './Assets/logo_tactica_global.jpeg'
 //import { Link } from 'react-router-dom'
 
 
-function Navbar() {
+const Navbar = () => {
 
   return (
     <div className='navbar'>

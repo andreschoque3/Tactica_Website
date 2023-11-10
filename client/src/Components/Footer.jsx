@@ -2,7 +2,7 @@ import React from 'react'
 import './Styles/Footer.css'
 import logo from './Assets/logo_tactica_global.jpeg'
 
-function Footer() {
+const Footer = () => {
   return (
     <div className='footer'>
     <div className='top'>

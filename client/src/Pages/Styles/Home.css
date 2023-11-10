@@ -1,0 +1,106 @@
+.header-sect {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(../Styles/Images/home-pg-bg.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.title-hm {
+    font-size: 45px;
+    font-weight: 600;
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 27%;
+    left: 51%;
+    transform: translate(-50%, 50%);
+    text-align: center;
+}
+
+.btn1 {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 500px;
+    padding: 20px 45px;
+    font-size: 20px;
+    top: 45%;
+    left: 35%;
+    background: transparent;
+    position: absolute;
+    cursor: pointer;
+}
+
+.btn1:hover {
+    border: 1px solid red;
+    background: red;
+    transition: 1s;
+}
+
+.btn2 {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 500px;
+    padding: 20px 45px;
+    top: 45%;
+    left: 55%;
+    background: transparent;
+    position: absolute;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.btn2:hover {
+    border: 1px solid red;
+    background: red;
+    transition: 1s;
+  }
+
+  .core-vals {
+    text-align: center;
+    font-size: 45px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .core-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .core-cards .card {
+    flex: 1;
+    margin: 20px 20px;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .core-cards img {
+    width: 100%;
+    height: auto;
+  }
+
+  .core-cards h2 {
+    margin: 15px 0px;
+    font-size: 45px;
+    color: white;
+  }
+
+  .card {
+    background: darkgray;
+  }
+
+  .core-cards p {
+    font-size: 20px;
+    color: white;
+    line-height: 1.5;
+    padding: 0px 10px;
+    margin-bottom: 20px;
+  }
