@@ -1,12 +1,36 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
+import Footer from "../Components/Footer"
 import "./Styles/Home.css"
 import card1 from "./Styles/Images/card-pic1.JPG"
 import card2 from "./Styles/Images/card-pic2.jpg"
 import card3 from "./Styles/Images/card-pic3.JPG"
 import card4 from "./Styles/Images/card-pic4.jpg"
+import videoImg1 from "./Styles/Images/vid-pic1.jpg"
+import videoImg2 from "./Styles/Images/vid-pic2.jpg"
+import videoImg3 from "./Styles/Images/vid-pic3.jpg"
 
 const Home = () => {
+
+  let list = document.querySelector('.slider list')
+  let picture = document.querySelectorAll('.slider .list .picture')
+  let dots = document.querySelectorAll('.slider .dot-list ')
+  let prev = document.getElementById('prev')
+  let next = document.getElementById('next')
+
+  let active = 0;
+
+  next.onclick = function() {
+    active += 1;
+    reloadSlider()
+  }
+
+  function reloadSlider() {
+    let checkLeft = picture[active].offsetLeft
+    list.style.left = -checkLeft + 'px'
+  }
+
+
   return (
     <div className='home-pg'>
       
@@ -16,12 +40,12 @@ const Home = () => {
         <div className='text box'>
           <h1 className='title-hm'>Training Heroes for Christ in the Public Safety Community</h1>
           <a className='btn1'>Get Started</a>
-          <a className='btn2'>Give</a>
+          <a className='btn2'>Give Today</a>
         </div>
       </section>
 
       <section className='core-vals'>
-        <h1 className='core-vals'>Our Core Values</h1>
+        <h1 className='core-vals-h1'>Our Core Values</h1>
         
         <div className='core-cards'>
             <div className='card'>
@@ -48,12 +72,47 @@ const Home = () => {
                 <p>TACTICA is committed to spiritual, financial & ministerial transparency in the stewardship of our resources.</p>
             </div>
 
+            <div className='btn-cls'>
+              <a className='btn'>Learn More</a>
+            </div>
+
         </div>
       </section>
 
-      <section>
-        <h1>TACTICA Ministries Videos</h1>
+      <section className='tactica-vids'>
+
+        <div className='slider'>
+          <div className='list'>
+            <div className='picture'>
+              <img src={videoImg1} alt="pciture1" />
+            </div>
+
+            <div className='picture'>
+              <img src={videoImg2} alt="pciture1" />
+            </div>
+
+            <div className='picture'>
+              <img src={videoImg3} alt="pciture1" />
+            </div>
+        </div>
+
+        </div>
+
+        <div className='arrows'>
+          <button id='prev'><i className='fas fa-arrow-left'></i></button>
+          <button id='next'><i className='fas fa-arrow-right'></i></button>
+        </div>
+
+        <div className='dots'>
+          <ul className='dot-list'>
+            <li className='active'></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
       </section>
+
+      <Footer/>
 
     </div>
   )
