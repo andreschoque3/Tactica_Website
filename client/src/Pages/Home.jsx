@@ -12,25 +12,6 @@ import videoImg3 from "./Styles/Images/vid-pic3.jpg"
 
 const Home = () => {
 
-  let list = document.querySelector('.slider list')
-  let picture = document.querySelectorAll('.slider .list .picture')
-  let dots = document.querySelectorAll('.slider .dot-list ')
-  let prev = document.getElementById('prev')
-  let next = document.getElementById('next')
-
-  let active = 0;
-
-  next.onclick = function() {
-    active += 1;
-    reloadSlider()
-  }
-
-  function reloadSlider() {
-    let checkLeft = picture[active].offsetLeft
-    list.style.left = -checkLeft + 'px'
-  }
-
-
   return (
     <div className='home-pg'>
       
@@ -82,7 +63,7 @@ const Home = () => {
       <section className='tactica-vids'>
 
         <div className='slider'>
-          <div className='list'>
+          <div className='slide'>
             <div className='picture'>
               <img src={videoImg1} alt="pciture1" />
             </div>
@@ -94,8 +75,11 @@ const Home = () => {
             <div className='picture'>
               <img src={videoImg3} alt="pciture1" />
             </div>
+         </div>
         </div>
 
+        <div className='playbutton'>
+          <button><i className='far fa-circle-play'></i></button>
         </div>
 
         <div className='arrows'>
