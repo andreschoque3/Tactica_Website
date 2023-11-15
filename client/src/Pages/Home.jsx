@@ -12,6 +12,55 @@ import videoImg3 from "./Styles/Images/vid-pic3.jpg"
 
 const Home = () => {
 
+  /*let list = document.querySelector('.slider .slide')
+  let slides = document.querySelector('.slider .slide .picture')
+  let dots = document.querySelector('.slider .dot-list li')
+  let prev = document.getElementById('prev')
+  let next = document.getElementById('next')
+
+  let active = 0;
+  let lengthSlides = slides.length -1 
+
+  next.onclick = function() {
+    if(active + 1 > lengthSlides){
+      active = 0
+    }else{
+      active = active + 1
+    }
+    reloadSlider()
+  }
+
+  prev.onclick = function() {
+    if(active - 1 > lengthSlides){
+      active = 0
+    }else{
+      active = active - 1
+    }
+    reloadSlider()
+  }
+
+  let refreshSlider = setInterval(() => {next.click()}, 5000)
+
+  function reloadSlider() {
+    let checkLeft = slide[active].offSetLeft
+    slide.style.left = -checkLeft + 'px'
+
+    let lastActiveDot = document.querySelector('.slider .dot-list li.active')
+    lastActiveDot.classList.remove('active')
+    dots[active].classList.add('active')
+    clearInterval(refreshSlider)
+    refreshSlider = setInterval(() => {next.click()}, 5000)
+  }
+  dots.forEach((li, key) => {
+    li.addEventListener('click', function() {
+      active = key;
+      reloadSlider();
+    })
+  })
+  
+  */
+
+
   return (
     <div className='home-pg'>
       
