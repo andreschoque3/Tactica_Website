@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState} from 'react'
 import Navbar from '../Components/Navbar'
 import Footer from "../Components/Footer"
 import "./Styles/Home.css"
@@ -12,53 +12,19 @@ import videoImg3 from "./Styles/Images/vid-pic3.jpg"
 
 const Home = () => {
 
-  /*let list = document.querySelector('.slider .slide')
-  let slides = document.querySelector('.slider .slide .picture')
-  let dots = document.querySelector('.slider .dot-list li')
-  let prev = document.getElementById('prev')
-  let next = document.getElementById('next')
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  let active = 0;
-  let lengthSlides = slides.length -1 
+  const nextSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % 3);
+  };
 
-  next.onclick = function() {
-    if(active + 1 > lengthSlides){
-      active = 0
-    }else{
-      active = active + 1
-    }
-    reloadSlider()
-  }
+  const prevSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide - 1 + 3) % 3);
+  };
 
-  prev.onclick = function() {
-    if(active - 1 > lengthSlides){
-      active = 0
-    }else{
-      active = active - 1
-    }
-    reloadSlider()
-  }
-
-  let refreshSlider = setInterval(() => {next.click()}, 5000)
-
-  function reloadSlider() {
-    let checkLeft = slide[active].offSetLeft
-    slide.style.left = -checkLeft + 'px'
-
-    let lastActiveDot = document.querySelector('.slider .dot-list li.active')
-    lastActiveDot.classList.remove('active')
-    dots[active].classList.add('active')
-    clearInterval(refreshSlider)
-    refreshSlider = setInterval(() => {next.click()}, 5000)
-  }
-  dots.forEach((li, key) => {
-    li.addEventListener('click', function() {
-      active = key;
-      reloadSlider();
-    })
-  })
-  
-  */
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+  };
 
 
   return (
@@ -111,36 +77,40 @@ const Home = () => {
 
       <section className='tactica-vids'>
 
-        <div className='slider'>
-          <div className='slide'>
+      <div className='slider'>
+        <div className='slide'  style={{ transform: `translateX(${-currentSlide * 100}%)` }}>
             <div className='picture'>
               <img src={videoImg1} alt="pciture1" />
             </div>
 
             <div className='picture'>
-              <img src={videoImg2} alt="pciture1" />
+              <img src={videoImg2} alt="pciture1"/>
             </div>
 
             <div className='picture'>
-              <img src={videoImg3} alt="pciture1" />
+              <img src={videoImg3} alt="pciture1"/>
             </div>
          </div>
-        </div>
+      </div>
 
         <div className='playbutton'>
           <button><i className='far fa-circle-play'></i></button>
         </div>
 
+        <div className='title-vids'>
+          <h1>Tactica Ministries Videos</h1>
+        </div>
+
         <div className='arrows'>
-          <button id='prev'><i className='fas fa-arrow-left'></i></button>
-          <button id='next'><i className='fas fa-arrow-right'></i></button>
+          <button id="prev" onClick={prevSlide}><i className="fas fa-arrow-left"></i></button>
+          <button id="next" onClick={nextSlide}><i className="fas fa-arrow-right"></i></button>
         </div>
 
         <div className='dots'>
           <ul className='dot-list'>
-            <li className='active'></li>
-            <li></li>
-            <li></li>
+          <li className={currentSlide === 0 ? 'active' : ''} onClick={() => goToSlide(0)}></li>
+          <li className={currentSlide === 1 ? 'active' : ''} onClick={() => goToSlide(1)}></li>
+          <li className={currentSlide === 2 ? 'active' : ''} onClick={() => goToSlide(2)}></li>
           </ul>
         </div>
       </section>

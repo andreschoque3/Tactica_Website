@@ -143,6 +143,8 @@
 /****** Videos Section ******/
 .tactica-vids {
   padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: darkgray;
 }
 
 .slider {
@@ -152,17 +154,17 @@
   margin: auto;
   position: relative;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
   
 }
 
 .slide {
-  width: max-content;
+  width: 1300px;
   height: 100%;
   position: absolute;
   opacity: 1;
-  transition: opacity ease-in-out 0.4s;
   display: flex;
-  /*transition: 1s*/
+  transition: 1s;
 }
 
 .slide img {
@@ -170,6 +172,20 @@
   max-width: 100vw;
   height: 100%;
   object-fit: cover;
+}
+
+.picture {
+  position: relative;
+}
+
+.picture::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .arrows {
@@ -201,6 +217,14 @@
 
 .fa-circle-play {
   font-size: 90px;
+}
+
+.title-vids h1 {
+  position: absolute;
+  bottom: -160%;
+  left: 31%;
+  font-size: 50px;
+  color: #fff;
 }
 
 .arrows button {
@@ -237,11 +261,11 @@
   margin: 0 2rem;
   box-shadow: 0px 0px 5px #555;
   cursor: pointer;
-  /*transition: 1s*/
+  transition: 1s
 }
 
 .dot-list li.active {
-  background-color: #555;
+  background-color: gray;
 }
 
 
