@@ -1,4 +1,5 @@
 /****** Header Section ******/
+
 .header-sect {
     min-height: 100vh;
     width: 100%;
@@ -137,7 +138,7 @@
 
 .btn-cls {
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 
 /****** Videos Section ******/
@@ -155,7 +156,6 @@
   position: relative;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  
 }
 
 .slide {
@@ -222,8 +222,8 @@
 .title-vids h1 {
   position: absolute;
   bottom: -160%;
-  left: 31%;
-  font-size: 50px;
+  left: 27%;
+  font-size: 55px;
   color: #fff;
 }
 
@@ -243,7 +243,7 @@
 
 .dot-list {
  position: absolute;
- bottom: -245%;
+ bottom: -240%;
  left: 42%;
  display: flex;
  padding-bottom: 20px;
@@ -270,9 +270,103 @@
 
 
 /****** Responsiveness ******/
-@media screen and (min-width:1600px) and (max-width: 2000px) {
+@media screen and (min-width:1600px) and (max-width: 4000px) {
   .btn-cls{
     position: absolute;
     margin-top: 460px;
   }
+
+  .btn1, .btn2 {
+    top: 40%;
+  }
+  
+  .tactica-vids {
+    margin-top: 140px;
+  }
+
+  .title-vids h1 {
+    bottom: -124%;
+    left: 32%;
+  }
+
+  .arrows {
+    bottom: -150%;
+    width: 55%;
+    left: 22%;
+  }
+
+  .playbutton {
+    bottom: -152%;
+  }
+
+  .dot-list {
+    bottom: -185%;
+    left: 43%;
+
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+  .title-hm {
+    font-size: 24px;
+    left: 49%;
+  }
+
+  .btn1 {
+    padding: 15px 25px;
+    font-size: 15px;
+    left: 10%;
+    top: 42%;
+  }
+
+  .btn2 {
+    padding: 15px 25px;
+    font-size: 15px;
+    top: 42%;
+  }
+
+  .core-vals-h1 {
+    font-size: 40px;
+  }
+
+  .core-cards h2 {
+    font-size: 30px;
+  }
+
+  .core-cards p {
+    font-size: 20px;
+  }
+
+  .btn {
+    padding: 15px 25px;
+    font-size: 15px;
+  }
+
+  .arrows {
+    bottom: -335%;
+    width: 80%;
+    left: 10%;
+  }
+
+  .dot-list {
+    bottom: -360%;
+    left: 20%;
+  }
+
+  .title-vids h1 {
+    font-size: 40px;
+    bottom: -320%;
+    
+  }
+
+  .picture, .slider {
+    height: 600px;
+  }
+
+  .playbutton {
+    bottom: -337%;
+    left: 39%;
+  }
+
 }

@@ -26,6 +26,19 @@ const Home = () => {
     setCurrentSlide(index);
   };
 
+  const totalSlides = 3;
+
+  const calculateTranslateX = () => {
+    const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+    
+    if (screenWidth < 800) {
+      return `${-currentSlide * (90 / totalSlides)}%`;
+    } else {
+      return `${-currentSlide * (300 / totalSlides)}%`;
+    }
+  };
+
 
   return (
     <div className='home-pg'>
@@ -78,7 +91,7 @@ const Home = () => {
       <section className='tactica-vids'>
 
       <div className='slider'>
-        <div className='slide'  style={{ transform: `translateX(${-currentSlide * 100}%)` }}>
+        <div className='slide' style={{ transform: `translateX(${calculateTranslateX()})` }}>
             <div className='picture'>
               <img src={videoImg1} alt="pciture1" />
             </div>
@@ -98,7 +111,7 @@ const Home = () => {
         </div>
 
         <div className='title-vids'>
-          <h1>Tactica Ministries Videos</h1>
+          <h1>TACTICA Ministries Videos</h1>
         </div>
 
         <div className='arrows'>

@@ -22,7 +22,7 @@ nav {
 }
 
 .footer {
-    background-color: black;
+    background-color: #2D3033;
     color: white;
     padding-bottom: 20px;
     padding-top: 20px;
@@ -70,4 +70,30 @@ nav {
 
 .menu li:hover::after {
     width: 100%;
+}
+
+@media screen and (min-width:1600px) and (max-width: 2000px) {
+    .menu li {
+        margin: 40px 70px 30px 50px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .logo-bottom {
+        width: 350px;
+        margin: auto;
+    }
+    .menu li {
+        margin: 20px 35px 10px 40px;
+    }
+
+    .footer-line {
+        margin: auto;
+        width: 87%;
+        margin-top: 15px;
+    }
+
+    .line1, .line3 {
+        padding-right: 30px;
+    }
 }
