@@ -1,16 +1,16 @@
-import React, { useState} from 'react'
-import Navbar from '../Components/Navbar'
-import Footer from "../Components/Footer"
+import React, { useState } from 'react'
 import "./Styles/Home.css"
-import card1 from "./Styles/Images/card-pic1.JPG"
-import card2 from "./Styles/Images/card-pic2.jpg"
-import card3 from "./Styles/Images/card-pic3.JPG"
-import card4 from "./Styles/Images/card-pic4.jpg"
-import videoImg1 from "./Styles/Images/vid-pic1.jpg"
-import videoImg2 from "./Styles/Images/vid-pic2.jpg"
-import videoImg3 from "./Styles/Images/vid-pic3.jpg"
+import card1 from "../Images/card-pic1.JPG"
+import card2 from "../Images/card-pic2.jpg"
+import card3 from "../Images/card-pic3.JPG"
+import card4 from "../Images/card-pic4.jpg"
+import videoImg1 from "../Images/vid-pic1.jpg"
+import videoImg2 from "../Images/vid-pic2.jpg"
+import videoImg3 from "../Images/vid-pic3.jpg"
+import Navbar from '../Components/Navbar/Navbar'
+import Footer from '../Components/Footer/Footer'
 
-const Home = () => {
+function Home() {
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -42,7 +42,7 @@ const Home = () => {
 
   return (
     <div className='home-pg'>
-      
+
       <Navbar/>
       
       <section className='header-sect'>
@@ -128,7 +128,7 @@ const Home = () => {
         </div>
       </section>
 
-      <Footer/>
+      <Footer />
 
     </div>
   )

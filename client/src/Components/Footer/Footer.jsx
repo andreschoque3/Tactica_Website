@@ -1,6 +1,7 @@
 import React from 'react'
-import './Styles/Footer.css'
-import logo from './Assets/logo_tactica_global.jpeg'
+import './Footer.css'
+import logo from '../Assets/logo_tactica_global.jpeg'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -9,13 +10,13 @@ const Footer = () => {
         <nav className='first'>
           <img src={logo} alt="logo" className='logo-bottom' />
           <ul className='menu'>
-            <li>Home</li>
-            <li>About</li>
-            <li>Blog</li>
-            <li>Serve</li>
-            <li>Give</li>
-            <li>Global</li>
-            <li>Contact</li>
+            <li><Link to="/Home" id='home-link'>Home</Link></li>
+            <li><Link to="/About" id='about-link'>About</Link></li>
+            <li><Link to="/Blog" id='blog-link'>Blog</Link></li>
+            <li><Link to="/Serve" id='serve-link'>Serve</Link></li>
+            <li><Link to="/Give" id='give-link'>Give</Link></li>
+            <li><Link to="/Global" id='global-link'>Global</Link></li>
+            <li><Link to="/Contact" id='contact-link'>Contact</Link></li>
           </ul>
           <i className='fas fa-bars'></i>
         </nav>

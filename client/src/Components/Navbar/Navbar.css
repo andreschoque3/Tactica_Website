@@ -1,5 +1,6 @@
 *{
     font-family: 'Poppins', sans-serif;
+    margin: 0;
 }
 
 nav {
@@ -22,6 +23,7 @@ nav {
     margin-top: 20px;
     font-size: 25px;
     color: white;
+    cursor: pointer;
 }
 
 .nav-menu li{
@@ -30,6 +32,12 @@ nav {
     margin: 10px 80px 5px;
     position: relative;
     font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+#home-link, #about-link, #blog-link, #serve-link, #give-link, #global-link, #contact-link {
+    text-decoration: none;
     color: white;
 }
 

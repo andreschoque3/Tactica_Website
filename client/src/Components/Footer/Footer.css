@@ -19,6 +19,12 @@ nav {
     position: relative;
     margin: 40px 45px 30px 40px;
     font-size: 20px;
+    cursor: pointer;
+}
+
+#home-link, #about-link, #blog-link, #serve-link, #give-link, #global-link, #contact-link {
+    text-decoration: none;
+    color: white;
 }
 
 .footer {

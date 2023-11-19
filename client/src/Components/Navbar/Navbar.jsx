@@ -1,7 +1,8 @@
 import React from 'react'
-import './Styles/Navbar.css'
-import logo from './Assets/logo_tactica_global.jpeg'
-//import { Link } from 'react-router-dom'
+import './Navbar.css'
+import logo from '../Assets/logo_tactica_global.jpeg'
+import { Link } from 'react-router-dom'
+
 
 
 const Navbar = () => {
@@ -28,13 +29,13 @@ const Navbar = () => {
       <div className='nav-bottom'>
         <nav className='second'>
           <ul className='nav-menu'>
-            <li>Home</li>
-            <li>About</li>
-            <li>Blog</li>
-            <li>Serve</li>
-            <li>Give</li>
-            <li>Global</li>
-            <li>Contact</li>
+            <li><Link to="/Home" id='home-link'>Home</Link></li>
+            <li><Link to="/About" id='about-link'>About</Link></li>
+            <li><Link to="/Blog" id='blog-link'>Blog</Link></li>
+            <li><Link to="/Serve" id='serve-link'>Serve</Link></li>
+            <li><Link to="/Give" id='give-link'>Give</Link></li>
+            <li><Link to="/Global" id='global-link'>Global</Link></li>
+            <li><Link to="/Contact" id='contact-link'>Contact</Link></li>
           </ul>
         </nav>
       </div>
