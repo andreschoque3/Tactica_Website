@@ -63,8 +63,8 @@ const About = () => {
       </div>
 
       <div className='bio-box'>
-        <p>Ryan and Gretchen Rought are Michigan natives and have been married over 26 years. Ryan came to know Christ and asked Him to be his Lord and Savior at the age of six. He served 11 years in the US Army, as well as 12 years as a Law Enforcement officer with Kalamazoo Public Safety. Ryan committed his life to full-time ministry in 2004. <br/>
-        Gretchen came to a saving knowledge of Jesus Christ at the age of 21. After studying Education, German and Spanish in college, she taught middle school level Spanish for 3 years. God has blessed them with two beautiful daughters and two godly sons-in-law. <br/>
+        <p>Ryan and Gretchen Rought are Michigan natives and have been married over 26 years. Ryan came to know Christ and asked Him to be his Lord and Savior at the age of six. He served 11 years in the US Army, as well as 12 years as a Law Enforcement officer with Kalamazoo Public Safety. Ryan committed his life to full-time ministry in 2004. <br/><br/>
+        Gretchen came to a saving knowledge of Jesus Christ at the age of 21. After studying Education, German and Spanish in college, she taught middle school level Spanish for 3 years. God has blessed them with two beautiful daughters and two godly sons-in-law. <br/><br/>
         Ryan and Gretchen work full-time in the ministry together. Together they share a passion for police leadership training, family and marriage biblical counseling, discipleship and mentoring, and the international community of first responders.</p>
         <h1>Ryan & Gretchen Rought</h1>
       </div>
@@ -75,7 +75,29 @@ const About = () => {
       <h1 className='vision-h1'>Our Vision</h1>
 
       <div className='vision-cards'>
+        <div className='vs-card'>
+          <i className='fas fa-book-bible'></i>
+          <h2>Gospel</h2>
+          <p>Public safety professionals becoming sold-out disciples of Christ.</p>
+        </div>
 
+        <div className='vs-card'>
+          <i className='fas fa-users'></i>
+          <h2>Discipleship</h2>
+          <p>These disciples becoming disciple makers.</p>
+        </div>
+
+        <div className='vs-card'>
+          <i className='fas fa-church'></i>
+          <h2>Local Church</h2>
+          <p>These families completely integrated into a local church body.</p>
+        </div>
+
+        <div className='vs-card'>
+          <i className='fas fa-earth-americas'></i>
+          <h2>Global Impact</h2>
+          <p>These families actively participating in church leadership and church planting efforts.</p>
+        </div>
       </div>
     </section>
 
