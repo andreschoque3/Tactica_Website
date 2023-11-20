@@ -1,0 +1,168 @@
+/****** Header Section ******/
+
+.header-section-ab {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(../Styles/about-pg-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+}
+
+.title-hm-ab {
+    font-size: 55px;
+    font-weight: 600;
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    text-align: center;
+}
+
+.btn-ab1 {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 500px;
+    padding: 20px 45px;
+    font-size: 20px;
+    top: 45%;
+    left: 43%;
+    background: transparent;
+    position: absolute;
+    cursor: pointer;
+}
+
+.btn-ab1:hover {
+    border: 1px solid red;
+    background: red;
+    transition: 1s;
+}
+
+/****** Mission Statement Section ******/
+
+.miss-stat-h1 {
+    text-align: center;
+    font-size: 55px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: gray;
+}
+
+.miss-stat p {
+    text-align: center;
+    font-size: 25px;
+    color: gray;
+    width: 97%;
+    padding-bottom: 20px;
+    margin-left: 10px;
+}
+
+.miss-stat hr {
+    width: 94%;
+    margin: 40px;
+    height: 4px;
+    background: gray;
+    margin-top: 2px;
+    margin-bottom: 25px;
+}
+
+/****** Founders Section ******/
+
+.tact-found-h1 {
+    text-align: center;
+    font-size: 55px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: gray;
+}
+
+.img-box img {
+    width: 45%;
+    margin-left: 60px;
+    position: relative;
+}
+
+.bio-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 425px;
+  border-radius: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-left: 65%;
+  position: absolute;
+  bottom: -130%;
+  border: gray;
+}
+
+.bio-box p {
+    font-size: 20px;
+}
+
+/****** Vision Section ******/
+
+.vision-h1 {
+    text-align: center;
+    font-size: 55px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: gray;
+}
+
+/****** Believe & Celebrate Section ******/
+
+.bel-cel {
+    padding-bottom: 30px;
+}
+
+.bel-cel-h1 {
+    text-align: center;
+    font-size: 55px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: gray;
+}
+
+.btn-ab2 {
+  display: inline-block;
+  text-decoration: none;
+  color: red;
+  border: 1px solid red;
+  border-radius: 500px;
+  padding: 20px 45px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 35%;
+}
+
+.btn-ab2:hover {
+  border: 1px solid red;
+  background: red;
+  transition: 1s;
+  color: #fff;
+}
+
+.btn-ab3 {
+  display: inline-block;
+  text-decoration: none;
+  color: red;
+  border: 1px solid red;
+  border-radius: 500px;
+  padding: 20px 45px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10%;
+}
+
+.btn-ab3:hover {
+    border: 1px solid red;
+    background: red;
+    transition: 1s;
+    color: #fff;
+}

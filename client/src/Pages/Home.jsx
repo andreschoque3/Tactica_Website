@@ -12,6 +12,8 @@ import Footer from '../Components/Footer/Footer'
 
 function Home() {
 
+  // Carousel/'slider' effect
+
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = () => {
