@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import "./Styles/About.css"
 import Navbar from '../Components/Navbar/Navbar'
 import Footer from '../Components/Footer/Footer'
@@ -37,6 +37,13 @@ const About = () => {
     }
   };
 
+  // Scroll effect
+    const missStatRef = useRef(null);
+  
+    const handleScrollToMissStat = () => {
+      missStatRef.current.scrollIntoView({ behavior: 'smooth' });
+    };
+
   return (
   <div className='about-pg'>
 
@@ -45,11 +52,11 @@ const About = () => {
     <section className='header-section-ab'>
       <div className='text box'>
         <h1 className='title-hm-ab'>TACTICA's Mission & Vision</h1>
-        <a className='btn-ab1'>Learn More</a>
+        <a className='btn-ab1' onClick={handleScrollToMissStat}>Learn More</a>
       </div>
     </section>
 
-    <section className='miss-stat'>
+    <section className='miss-stat' ref={missStatRef}>
       <h1 className='miss-stat-h1'>Mission Statement</h1>
       <p>This mission of TACTICA is to fulfill the Great Commission by investing into the lives of Central American authorities and their families, through high quality police training,evangelism, and discipleship.</p>
       <hr />
