@@ -14,12 +14,10 @@
 .title-hm-ab {
     font-size: 55px;
     font-weight: 600;
-    width: 90%;
     color: white;
     position: absolute;
-    top: 27%;
-    left: 50%;
-    transform: translate(-50%, 50%);
+    top: 30%;
+    left: 25%;
     text-align: center;
 }
 
@@ -48,7 +46,7 @@
 
 .miss-stat-h1 {
     text-align: center;
-    font-size: 55px;
+    font-size: 45px;
     padding-top: 20px;
     padding-bottom: 20px;
     color: gray;
@@ -56,11 +54,11 @@
 
 .miss-stat p {
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     color: gray;
-    width: 97%;
+    width: 92%;
     padding-bottom: 20px;
-    margin-left: 10px;
+    margin-left: 50px;
 }
 
 .miss-stat hr {
@@ -77,7 +75,7 @@
 
 .tact-found-h1 {
     text-align: center;
-    font-size: 55px;
+    font-size: 45px;
     padding-top: 10px;
     padding-bottom: 40px;
     color: gray;
@@ -98,7 +96,7 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   margin-left: 63%;
   position: absolute;
-  bottom: -143%;
+  bottom: -138%;
   border-style: solid;
   border-color: gray;
   border-width: 8px;
@@ -123,7 +121,7 @@
 
 .vision-h1 {
     text-align: center;
-    font-size: 55px;
+    font-size: 45px;
     padding-top: 40px;
     padding-bottom: 20px;
     color: gray;
@@ -208,7 +206,7 @@
 
 .bel-cel-h1 {
     text-align: center;
-    font-size: 55px;
+    font-size: 45px;
     padding-top: 20px;
     padding-bottom: 20px;
     color: gray;

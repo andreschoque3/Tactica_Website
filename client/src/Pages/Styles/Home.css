@@ -16,7 +16,7 @@
     width: 90%;
     color: white;
     position: absolute;
-    top: 24%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, 50%);
     text-align: center;
@@ -30,7 +30,7 @@
     border-radius: 500px;
     padding: 20px 45px;
     font-size: 20px;
-    top: 58%;
+    top: 52%;
     left: 34%;
     background: transparent;
     position: absolute;
@@ -50,7 +50,7 @@
     border: 1px solid #fff;
     border-radius: 500px;
     padding: 20px 45px;
-    top: 58%;
+    top: 52%;
     left: 54%;
     background: transparent;
     position: absolute;
@@ -68,7 +68,7 @@
 
   .core-vals-h1 {
     text-align: center;
-    font-size: 55px;
+    font-size: 45px;
     padding-top: 20px;
     padding-bottom: 20px;
     color: gray;
