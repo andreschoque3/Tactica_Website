@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import "./Styles/Home.css"
 import card1 from "../Images/card-pic1.JPG"
 import card2 from "../Images/card-pic2.jpg"
@@ -50,8 +51,8 @@ function Home() {
       <section className='header-sect'>
         <div className='text box'>
           <h1 className='title-hm'>Training Heroes for Christ in the Public Safety Community</h1>
-          <a className='btn1'>Get Started</a>
-          <a className='btn2'>Give Today</a>
+          <Link to="/Serve" className='btn1'>Get Started</Link>
+          <Link to="/Give" className='btn2'>Give Today</Link>
         </div>
       </section>
 
@@ -108,12 +109,8 @@ function Home() {
          </div>
       </div>
 
-        <div className='playbutton'>
-          <button><i className='far fa-circle-play'></i></button>
-        </div>
-
         <div className='title-vids'>
-          <h1>TACTICA Ministries Videos</h1>
+          <h1>TACTICA Ministries Media</h1>
         </div>
 
         <div className='arrows'>

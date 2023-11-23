@@ -4,7 +4,7 @@
     min-height: 100vh;
     width: 100%;
     background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
-    url(../Styles/blog-pg-bg.jpeg);
+    url(../Styles/blog-pg-bg.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -63,7 +63,7 @@
     margin-left: 10px;
 }
 
-input {
+.form-box input {
     position: relative;
     margin-left: 24%;
     border: solid red;
@@ -77,7 +77,7 @@ input {
     color: gray;
 }
 
-button {
+.form-box button {
     position: relative;
     border: red;
     background-color: red;
@@ -90,6 +90,8 @@ button {
     outline: none;
     cursor: pointer;
 }
+
+/****** Blogs Section ******/
 
 .post-1, .post-2 {
   display: flex;
@@ -177,4 +179,73 @@ button {
     font-size: 20px;
     margin-left: 34%;
     position: relative;
+}
+
+/****** Responsiveness ******/
+
+@media screen and (min-width:1600px) and (max-width: 4000px) {
+    .title-blg {
+        left: 34%;
+    }
+
+    .btn-blg {
+        left: 44.5%;
+    }
+
+    .form-box input {
+        margin-left: 29%;
+    }
+
+
+}
+
+@media screen and (max-width: 800px) {
+    .title-blg {
+        font-size: 30px;
+        left: 10%;
+    }
+
+    .btn-blg {
+        padding: 15px 25px;
+        font-size: 15px;
+        left: 33%;
+        top: 42%;
+        margin-top: -10%;
+    }
+
+    .newsletter-sect h1 {
+        font-size: 35px;
+    }
+
+    .newsletter-sect p {
+        font-size: 15px;
+    }
+
+    .form-box input {
+        width: 200px;
+        margin-left: 12%;
+        padding-left: 15px;
+    }
+
+    .form-box button {
+        width: 100px;  
+    }
+
+    .post-1 h2 {
+        font-size: 20px;
+    }
+
+    .post-1 p {
+        font-size: 18px;
+    }
+
+    .post-2 h2 {
+        font-size: 20px;
+    }
+
+    .post-2 p {
+        font-size: 18px;
+    }
+
+
 }

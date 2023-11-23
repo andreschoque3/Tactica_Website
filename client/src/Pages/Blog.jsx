@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './Styles/Blog.css'
 import Navbar from '../Components/Navbar/Navbar'
 import Footer from '../Components/Footer/Footer'
@@ -10,6 +10,14 @@ import artPic5 from '../Images/article-pic5.png'
 import artPic6 from '../Images/article-pic6.png'
 
 const Blog = () => {
+
+  // Scroll effect
+  const missStatRef = useRef(null);
+  
+  const handleScrollToMissStat = () => {
+    missStatRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
   <div className='blog=pg'>
 
@@ -18,11 +26,11 @@ const Blog = () => {
     <section className='header-section-blg'>
       <div className='text-box'>
         <h1 className='title-blg'>TACTICA Testimonies</h1>
-        <a className='btn-blg'>Read More</a>
+        <a className='btn-blg' onClick={handleScrollToMissStat}>Read More</a>
       </div>
     </section>
 
-    <section className='newsletter-sect'>
+    <section className='newsletter-sect' ref={missStatRef}>
       <h1>Sign Up to Receive TACTICA News</h1>
       <p>You will receive notifications when we post new content</p>
 
@@ -64,7 +72,7 @@ const Blog = () => {
           <div className='blog'>
             <img src={artPic4} alt="blog4" />
             <h3>Ministry</h3>
-            <h2>lorem ipsum dolor sit amet consectur abdui kabib</h2>
+            <h2>lorem ipsum dolor sit amet consectur abdui</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt kid adi mundi</p>
             <a>Read More</a>
           </div>
@@ -72,7 +80,7 @@ const Blog = () => {
           <div className='blog'>
             <img src={artPic5} alt="blog5" />
             <h3>Devotions</h3>
-            <h2>lorem ipsum dolor sit amet consectur abdui kabib</h2>
+            <h2>lorem ipsum dolor sit amet consectur abdui</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt kid adi mundi</p>
             <a>Read More</a>
           </div>
@@ -80,7 +88,7 @@ const Blog = () => {
           <div className='blog'>
             <img src={artPic6} alt="blog6" />
             <h3>Daily Prayer</h3>
-            <h2>lorem ipsum dolor sit amet consectur abdui kabib</h2>
+            <h2>lorem ipsum dolor sit amet consectur abdui</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt kid adi mundi</p>
             <a>Read More</a>
           </div>

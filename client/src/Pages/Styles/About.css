@@ -123,7 +123,6 @@
     text-align: center;
     font-size: 45px;
     padding-top: 40px;
-    padding-bottom: 20px;
     color: gray;
 }
 
@@ -142,7 +141,7 @@
     border-style: solid;
     border-width: 8px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-    margin: 20px;
+    margin: 40px;
     transition: 0.5s ease;
     cursor: pointer;
     padding: 25px;
@@ -208,7 +207,7 @@
     text-align: center;
     font-size: 45px;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     color: gray;
 }
 
@@ -250,9 +249,15 @@
     color: #fff;
 }
 
+/****** Responsiveness ******/
+
 @media screen and (min-width:1600px) and (max-width: 4000px) {
+    .title-hm-ab {
+        left: 30%;
+    }
+    
     .btn-ab1 {
-        left: 45%;
+        left: 44.5%;
     }
 
     .img-box img {
@@ -261,7 +266,7 @@
     }
 
     .bio-box {
-        bottom: -118%;
+        bottom: -114%;
         height: 620px
     }
 
@@ -274,32 +279,36 @@
     }
 
     .miss-stat hr {
-        width: 94.5%;
+        width: 93%;
         margin-left: 2%;
+    }
+
+    .btn-ab2 {
+        margin-left: 36%;
     }
 
 }
 
 @media screen and (max-width: 800px) {
     .title-hm-ab {
-        font-size: 25px;
-        padding-bottom: 50px;
+        font-size: 30px;
+        left: 0.5%;
     }
 
     .btn-ab1 {
         padding: 15px 25px;
         font-size: 15px;
         left: 33%;
-        top: 40%;
+        top: 42%;
     }
 
     .miss-stat-h1 {
-        font-size: 40px;
+        font-size: 35px;
     }
 
     .miss-stat p {
         font-size: 16px;
-        margin-left: 4px;
+        margin-left: 4%;
     }
 
     .miss-stat hr {
@@ -308,7 +317,7 @@
     }
 
     .tact-found-h1 {
-        font-size: 40px;
+        font-size: 35px;
     }
 
     .img-box img {
@@ -326,19 +335,19 @@
     }
 
     .bio-box p {
-        font-size: 13px;
+        font-size: 15px;
     }
 
     .bio-box h1 {
-        margin-left: 30px;
+        font-size: 25px;
     }
 
     .vision-h1 {
-        font-size: 40px;
+        font-size: 35px;
     }
 
     .bel-cel-h1 {
-        font-size: 40px;
+        font-size: 35px;
         
     }
 
@@ -355,6 +364,5 @@
         position: absolute;
         left: 44%;
     }
-
-
+    
 }

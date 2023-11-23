@@ -98,7 +98,7 @@
  }
 
  .core-cards h2 {
-  font-size: 35px;
+  font-size: 30px;
   margin-bottom: 15px;
   margin-top: 15px;
   text-align: center;
@@ -142,6 +142,7 @@
 }
 
 /****** Videos Section ******/
+
 .tactica-vids {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -197,28 +198,6 @@
   justify-content: space-between;
 }
 
-.playbutton {
-  position: absolute;
-  width: 90%;
-  bottom: -188%;
-  left: 47%;
-  display: flex;
-}
-
-.playbutton button {
-  width: 90px;
-  height: 90px;
-  border-radius: 90%;
-  background-color: #fff5;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-.fa-circle-play {
-  font-size: 90px;
-}
-
 .title-vids h1 {
   position: absolute;
   bottom: -160%;
@@ -243,7 +222,7 @@
 
 .dot-list {
  position: absolute;
- bottom: -240%;
+ bottom: -230%;
  left: 42%;
  display: flex;
  padding-bottom: 20px;
@@ -270,14 +249,19 @@
 
 
 /****** Responsiveness ******/
+
 @media screen and (min-width:1600px) and (max-width: 4000px) {
+  .title-hm {
+    top: 25%;
+  }
+
   .btn-cls{
     position: absolute;
     margin-top: 460px;
   }
 
   .btn1, .btn2 {
-    top: 40%;
+    top: 45%;
   }
   
   .tactica-vids {
@@ -290,17 +274,13 @@
   }
 
   .arrows {
-    bottom: -150%;
+    bottom: -140%;
     width: 55%;
     left: 22%;
   }
 
-  .playbutton {
-    bottom: -152%;
-  }
-
   .dot-list {
-    bottom: -185%;
+    bottom: -180%;
     left: 43%;
 
   }
@@ -311,7 +291,7 @@
   .title-hm {
     font-size: 25px;
     left: 49%;
-    padding-bottom: 50px;
+    margin-top: 15%;
   }
 
   .btn1 {
@@ -328,15 +308,15 @@
   }
 
   .core-vals-h1 {
-    font-size: 40px;
+    font-size: 35px;
   }
 
   .core-cards h2 {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   .core-cards p {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .btn {
@@ -345,29 +325,24 @@
   }
 
   .arrows {
-    bottom: -335%;
+    bottom: -305%;
     width: 80%;
     left: 10%;
   }
 
   .dot-list {
-    bottom: -360%;
+    bottom: -335%;
     left: 20%;
   }
 
   .title-vids h1 {
     font-size: 40px;
-    bottom: -320%;
+    bottom: -295%;
     
   }
 
   .picture, .slider {
     height: 600px;
-  }
-
-  .playbutton {
-    bottom: -337%;
-    left: 39%;
   }
 
 }
