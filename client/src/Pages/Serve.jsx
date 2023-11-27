@@ -1,17 +1,26 @@
-import React from 'react'
+import React, { useRef} from 'react'
 import './Styles/Serve.css'
 import Navbar from '../Components/Navbar/Navbar'
 import Footer from '../Components/Footer/Footer'
 
 const Serve = () => {
+
+  // Scroll effect
+  const missStatRef = useRef(null);
+  
+  const handleScrollToMissStat = () => {
+    missStatRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
   <div className='serve-pg'>
+
     <Navbar/>
 
     <section className='header-section-sv'>
       <div className='text-box-sv'>
         <h1 className='sv-h1'>How to Serve in the Ministry</h1>
-        <a className='btn-sv-1'>Get Involved</a>
+        <a className='btn-sv-1' onClick={handleScrollToMissStat}>Get Involved</a>
       </div>
     </section>
 
@@ -21,7 +30,7 @@ const Serve = () => {
 
     </section>
 
-    <section className='footer-section'>
+    <section className='footer-section' ref={missStatRef}>
       <div className='app-box-sv'>
         <h1 className='app-h1'>Apply to Serve</h1>
         <a className='btn-sv-2'>Apply Here</a>
@@ -29,6 +38,7 @@ const Serve = () => {
     </section>
 
     <Footer/>
+    
   </div>
   )
 }

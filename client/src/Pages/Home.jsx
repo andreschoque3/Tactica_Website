@@ -85,7 +85,7 @@ function Home() {
             </div>
 
             <div className='btn-cls'>
-              <a className='btn'>Learn More</a>
+              <Link to="/About" className='btn'>Learn More</Link>
             </div>
 
         </div>
