@@ -126,3 +126,15 @@
 .donation-cards-gv {
     margin-bottom: 40px;
 }
+
+/****** Responsiveness ******/
+
+@media screen and (min-width:1600px) and (max-width: 4000px) {
+    .title-gv {
+        left: 42%;
+    }
+
+    .btn-gv-1 {
+        left: 44%;
+    }
+}

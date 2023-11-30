@@ -46,7 +46,7 @@
     margin-left: 15%;
     background: gray;
     margin-top: 2px;
-    margin-bottom: 25px;
+    margin-bottom: 3%;
 }
 
 /****** Global Section ******/
@@ -64,12 +64,7 @@
     padding-left: 13.5%;
 }
 
-.logo-3 img {
-    position: absolute;
-    padding-left: 20%;
-}
-
-.logo-4 img {
+.logo-3 img, .logo-4 img {
     position: absolute;
     padding-left: 20%;
 }
@@ -121,5 +116,56 @@
     color: #fff;
 }
 
+/****** Responsiveness ******/
+
+@media screen and (min-width:1600px) and (max-width: 4000px) {
+    .header-glo h1 {
+        left: 30%;
+    }
+
+    .middle-glo hr {
+        width: 70%;
+    }
+
+    .logo-1 img, .logo-2 img {
+        padding-left: 17.5%;
+    }
+
+    .logo-3 img, .logo-4 img {
+        padding-left: 22.5%;
+    }
+
+    .logo-1 p, .logo-2 p, .logo-3 p, .logo-4 p {
+        margin-left: 51.5%;
+    }
+
+    .logo-1 a, .logo-2 a, .logo-3 a, .logo-4 a {
+        margin-left: 51.5%;
+    }
+
+    .logo-1 h2 {
+        margin-left: 18.8%;
+    }
+    
+    .logo-2 h2 {
+        margin-left: 13.6%;
+    }
+    
+    .logo-3 h2 {
+        margin-left: 11.2%;
+    }
+    
+    .logo-4 h2 {
+        margin-left: 11.3%;
+    }
+
+    
+    
+
+
+
+
+
+}
 
 

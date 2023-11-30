@@ -1,0 +1,117 @@
+/****** Header Section ******/
+
+.header-section-cont {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(./contact-pg-bg.JPG);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.header-section-cont h1 {
+    font-size: 55px;
+    font-weight: 600;
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    text-align: center;
+}
+
+.contact-det h1 {
+    font-size: 55px;
+    padding-top: 6%;
+    padding-bottom: 20px;
+    padding-left: 10%;
+}
+
+.contact-det h2 {
+    padding-left: 10.5%;
+    width: 30%;
+}
+
+.phone-num {
+    position: relative;
+    left: 10.5%;
+    margin-top: 2%;
+    font-size: 25px;
+    font-weight: 600;
+    color: gray;
+}
+
+.fa-phone {
+    color: red;
+    padding-right: 3%;
+    font-size: 35px;
+}
+
+.email {
+    position: relative;
+    left: 10.5%;
+    margin-top: 2%;
+    font-size: 25px;
+    font-weight: 600;
+    font-style: italic;
+    color: gray
+}
+
+.fa-envelope {
+    color: red;
+    padding-right: 3%;
+    font-size: 35px;
+}
+
+.contact-fm {
+    flex-basis: 60%;
+    position: absolute;
+    left: 47%;
+    top: 131%;
+}
+
+.contact-det {
+    padding-bottom: 20%;
+    overflow: hidden;
+}
+
+form input, form textarea {
+    width: 80%;
+    border: 0;
+    outline: none;
+    background: lightgray;
+    padding: 15px;
+    margin: 15px 0;
+    color: gray;
+    font-size: 20px;
+    border-radius: 6px;
+}
+
+.contact-fm button {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    height: 60px;
+    width: 205px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    border: red;
+    background-color: red;
+    color: #fff;
+}
+
+/****** Responsiveness ******/
+
+@media screen and (min-width:1600px) and (max-width: 4000px) {
+    .contact-fm {
+        top: 126%;
+    }
+
+    .fa-phone, .fa-envelope {
+        padding-right: 2%;
+
+    }
+
+}

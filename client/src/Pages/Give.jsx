@@ -37,7 +37,7 @@ const Give = () => {
 
         <div className='don-card'>
           <img src={donImg2} alt="don-card2" />
-          <h2>Rought Family</h2>
+          <h2>Ryan & Gretchen Rought</h2>
           <a className='btn-gv-3'>Donate Now</a>
         </div>
 

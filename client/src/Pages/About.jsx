@@ -58,7 +58,7 @@ const About = () => {
 
     <section className='miss-stat' ref={missStatRef}>
       <h1 className='miss-stat-h1'>Mission Statement</h1>
-      <p>This mission of TACTICA is to fulfill the Great Commission by investing into the lives of Central American authorities and their families, through high quality police training,evangelism, and discipleship.</p>
+      <p>This mission of TACTICA is to fulfill the Great Commission by investing into the lives of Central American authorities and their families, through high quality police training, evangelism, and discipleship.</p>
       <hr />
     </section>
 

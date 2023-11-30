@@ -105,3 +105,23 @@
     background: red;
     transition: 1s;
 }
+
+/****** Responsiveness ******/
+
+@media screen and (min-width:1600px) and (max-width: 4000px) {
+    .sv-h1 {
+        left: 31%;
+    }
+
+    .btn-sv-1 {
+        left: 45%;
+    }
+
+    .app-h1 {
+        left: 40%;
+    }
+
+    .btn-sv-2 {
+        left: 45%;
+    }
+}
