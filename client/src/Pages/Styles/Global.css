@@ -159,12 +159,55 @@
         margin-left: 11.3%;
     }
 
-    
-    
+}
 
+@media screen and (max-width: 800px) {
+    .header-glo {
+        min-height: 70vh;
+    }
 
+    .header-glo h1 {
+        font-size: 30px;
+        left: 2%;
+    }
 
+    .middle-glo h1 {
+        font-size: 35px;
+    }
 
+    .middle-glo p {
+        font-size: 15px;
+        width: 60%;
+        margin: auto;
+    }
+
+    .middle-glo hr {
+        margin-left: 13%;
+    }
+
+    .logo-1 img, .logo-2 img {
+        width: 80%;
+        padding-left: 8%;
+    }
+
+    .logo-3 img, .logo-4 img {
+        width: 75%;
+        padding-left: 15%;
+    }
+
+    .logo-1 h2, .logo-2 h2, .logo-3 h2, .logo-4 h2 {
+        padding-top: 15%;
+        margin: auto;
+    }
+
+    .logo-1 p, .logo-2 p, .logo-3 p, .logo-4 p {
+        margin: auto;
+        width: 75%;
+    }
+
+    .logo-1 a, .logo-2 a, .logo-3 a, .logo-4 a {
+        margin-left: 28%;
+    }
 
 }
 

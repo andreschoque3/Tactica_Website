@@ -293,6 +293,11 @@
 }
 
 @media screen and (max-width: 800px) {
+
+    .header-section-ab {
+        min-height: 70vh;
+      }
+
     .title-hm-ab {
         font-size: 30px;
         left: 0.5%;
@@ -301,8 +306,8 @@
     .btn-ab1 {
         padding: 15px 25px;
         font-size: 15px;
-        left: 33%;
-        top: 42%;
+        left: 34%;
+        top: 46%;
     }
 
     .miss-stat-h1 {
@@ -311,7 +316,8 @@
 
     .miss-stat p {
         font-size: 16px;
-        margin-left: 4%;
+        margin-left: 10%;
+        width: 80%;
     }
 
     .miss-stat hr {
@@ -328,6 +334,7 @@
         padding-bottom: 30px;
         margin: auto;
         left: 10%;
+        border: none;
     }
 
     .bio-box {

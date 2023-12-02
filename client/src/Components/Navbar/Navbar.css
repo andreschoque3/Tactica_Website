@@ -90,7 +90,35 @@ nav .fa-circle-xmark {
 
 @media screen and (max-width: 800px) {
     .logo-top {
-        margin: auto;
-        width: 350px;
+        margin-left: 5%;
+        width: 300px;
     }
+
+    .navbar-line {
+        display: none;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .icon-menu {
+        display: none;
+    }
+
+    .navbar {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .fa-bars {
+        display: block;
+        font-size: 30px;
+        margin-left: 87%;
+        top: 30px;
+        position: absolute;
+        color: white;
+        cursor: pointer;
+    }
+
 }

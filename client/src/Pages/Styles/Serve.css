@@ -125,3 +125,45 @@
         left: 45%;
     }
 }
+
+@media screen and (max-width: 800px) {
+    .header-section-sv {
+        min-height: 70vh;
+    }
+
+    .footer-section {
+        min-height: 70vh;
+    }
+
+    .sv-h1 {
+        font-size: 30px;
+        left: 4%;
+    }
+
+    .btn-sv-1 {
+        padding: 15px 25px;
+        font-size: 15px;
+        left: 34%;
+        top: 55%;
+        margin-top: -10%;
+    }
+
+    .middle-section h1 {
+        font-size: 35px;
+    }
+
+    .middle-section p {
+        font-size: 15px;
+    }
+
+    .app-h1 {
+        font-size: 30px;
+        left: 25%; 
+    }
+
+    .btn-sv-2 {
+        padding: 15px 25px;
+        font-size: 15px;
+        left: 35%;
+    }
+}

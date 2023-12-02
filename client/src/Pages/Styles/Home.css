@@ -146,7 +146,6 @@
 .tactica-vids {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: darkgray;
 }
 
 .slider {
@@ -288,6 +287,11 @@
 }
 
 @media screen and (max-width: 800px) {
+
+  .header-sect {
+    min-height: 70vh;
+  }
+
   .title-hm {
     font-size: 25px;
     left: 49%;
@@ -298,13 +302,13 @@
     padding: 15px 25px;
     font-size: 15px;
     left: 10%;
-    top: 42%;
+    top: 52%;
   }
 
   .btn2 {
     padding: 15px 25px;
     font-size: 15px;
-    top: 42%;
+    top: 52%;
   }
 
   .core-vals-h1 {
@@ -325,24 +329,26 @@
   }
 
   .arrows {
-    bottom: -305%;
+    bottom: -230%;
     width: 80%;
     left: 10%;
   }
 
   .dot-list {
-    bottom: -335%;
+    bottom: -250%;
     left: 20%;
   }
 
   .title-vids h1 {
-    font-size: 40px;
-    bottom: -295%;
+    font-size: 35px;
+    text-align: center;
+    bottom: -220%;
+    left: 0%;
     
   }
 
   .picture, .slider {
-    height: 600px;
+    height: 400px;
   }
 
 }

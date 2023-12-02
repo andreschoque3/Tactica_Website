@@ -138,3 +138,41 @@
         left: 44%;
     }
 }
+
+@media screen and (max-width: 800px) {
+    .header-section-gv {
+        min-height: 70vh;
+    }
+
+    .title-gv {
+        font-size: 30px;
+        left: 30%;
+    }
+
+    .btn-gv-1 {
+        padding: 15px 25px;
+        font-size: 15px;
+        left: 33%;
+        margin-top: -10%;
+        top: 50%;
+    }
+
+    .donation-gv h1 {
+        font-size: 35px;
+        width: 70%;
+        margin: auto;
+    }
+
+    .donation-gv p {
+        font-size: 15px;
+        width: 80%;
+        margin: auto;
+    }
+
+    .row-1 a, .row-2 a {
+        padding: 15px 25px;
+        font-size: 15px;
+        margin-left: 29%;
+    }
+
+}

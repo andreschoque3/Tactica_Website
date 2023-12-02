@@ -115,3 +115,42 @@ form input, form textarea {
     }
 
 }
+
+@media screen and (max-width: 800px) {
+    .header-section-cont {
+        min-height: 70vh;
+    }
+
+    .header-section-cont h1 {
+        font-size: 30px;
+        left: 30%;
+    }
+
+    .contact-det h1 {
+        font-size: 35px;
+        margin: auto;
+    }
+
+    .contact-det h2 {
+        font-size: 20px;
+        width: 70%;
+        padding-bottom: 20px;
+    }
+
+    .phone-num, .email {
+        font-size: 20px;
+    }
+
+    .fa-envelope, .fa-phone {
+        font-size: 20px;
+    }
+
+    .contact-fm {
+        top: 108%;
+        left: 9%;
+    }
+
+    .contact-det {
+        padding-bottom: 150%;
+    }
+}

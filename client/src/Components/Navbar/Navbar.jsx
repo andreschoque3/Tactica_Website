@@ -3,8 +3,6 @@ import './Navbar.css'
 import logo from '../Assets/logo_tactica_global.jpeg'
 import { Link } from 'react-router-dom'
 
-
-
 const Navbar = () => {
 
   return (
