@@ -1,5 +1,6 @@
 import React from 'react'
 import './Styles/Give.css'
+import { Link } from 'react-router-dom'
 import Navbar from '../Components/Navbar/Navbar'
 import Footer from '../Components/Footer/Footer'
 import donImg1 from '../Images/donation-pic1.jpg'
@@ -9,6 +10,25 @@ import donImg4 from '../Images/donation-pic4.jpg'
 import donImg5 from '../Images/donation-pic5.jpg'
 
 const Give = () => {
+
+  const handleTacticaMinistriesBtn = () => {
+    const paypalUrl = 'https://www.paypal.com/paypalme/tacticaministries?country.x=US&locale.x=en_US'
+
+    window.open(paypalUrl, '_blank')
+  }
+
+  const handleabweryangretchenbtn = () => {
+    const abwefirstUrl = 'https://give.abwe.org/checkout?page=1287'
+
+    window.open(abwefirstUrl, '_blank')
+  }
+
+  const handleabwetaticateamsbtn = () => {
+    const abwesecondUrl = 'https://give.abwe.org/checkout?page=501'
+
+    window.open(abwesecondUrl, '_blank')
+  }
+
   return (
   <div>
 
@@ -24,7 +44,9 @@ const Give = () => {
 
     <section className='donation-gv'>
         <h1>Make a Donation Today</h1>
-        <p>Our mission is to train Christ serving officers. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+        <p>There are a variety of ways to come alongside TACTICA Ministries. Explore below the following giving opportunities: Support the TATICA general ministry fund; provide funding for the personal ministry of TACTICA's founders, Ryan and Gretchen Rought; Donate equipment, gear, apparel, and/or merchandise to be used in the ministry; Give towards the TACTICA Bible project; Make a donation for an individual participating on a TACTICA mission trip.</p>
+        <br />
+        <p><b>TACTICA Ministries is a non-profit, tax-exempt, 501(c)(3) organization.</b> Please note: Donation processing for the personal ministry of Ryan & Gretchen Rought as well as donations for short term mission team members are handled by the mission organization ABWE; your receipt for tax purposes will come from ABWE when making a donation to Ryan & Gretchen Rought or a TACTICA Team.</p>
     </section>
 
     <section className='donation-cards-gv'>
@@ -32,19 +54,19 @@ const Give = () => {
         <div className='don-card'>
           <img src={donImg1} alt="don-card1" />
           <h2>TACTICA Ministries</h2>
-          <a className='btn-gv-2'>Donate Now</a>
+          <a className='btn-gv-2' onClick={handleTacticaMinistriesBtn}>Donate Now</a>
         </div>
 
         <div className='don-card'>
           <img src={donImg2} alt="don-card2" />
           <h2>Ryan & Gretchen Rought</h2>
-          <a className='btn-gv-3'>Donate Now</a>
+          <a className='btn-gv-3' onClick={handleabweryangretchenbtn}>Donate Now</a>
         </div>
 
         <div className='don-card'>
           <img src={donImg3} alt="don-card3" />
           <h2>Equipment</h2>
-          <a className='btn-gv-4'>Learn More</a>
+          <Link to="/Equipment" className='btn-gv-4'>Learn More</Link>
         </div>
       </div>
 
@@ -52,13 +74,13 @@ const Give = () => {
         <div className='don-card'>
           <img src={donImg4} alt="don-card4" />
           <h2>Bible Project</h2>
-          <a className='btn-gv-5'>Donate Now</a>
+          <a className='btn-gv-5' onClick={handleTacticaMinistriesBtn}>Donate Now</a>
         </div>
 
         <div className='don-card'>
           <img src={donImg5} alt="don-card5" />
           <h2>TACTICA Teams</h2>
-          <a className='btn-gv-6'>Donate Now</a>
+          <a className='btn-gv-6' onClick={handleabwetaticateamsbtn}>Donate Now</a>
         </div>
       </div>
 

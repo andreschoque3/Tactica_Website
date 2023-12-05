@@ -8,6 +8,7 @@ import Contact from './Pages/Contact'
 import LoginSignin from './Pages/LoginSignin'
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Equipment from './Pages/Equipment'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path='/Give' element={<Give/>}/>
           <Route path='/Global' element={<Global/>}/>
           <Route path='/Contact' element={<Contact/>}/>
+          <Route path='/Equipment' element={<Equipment/>}/> 
         </Routes>
       </BrowserRouter>
     </div>
