@@ -17,8 +17,8 @@ const Contact = () => {
     <section className='contac-section'>
       <div className='contact-det'>
         <h1>TACTICA Ministries</h1>
-        <h2>5611 Springridge St. Portage, MI 49024</h2>
-        <p className='phone-num'><i className='fas fa-phone'></i> 269-993-4813</p>
+        <h2>5611 Springridge St. Portage, MI, USA 49024</h2>
+        <p className='phone-num'><i className='fas fa-phone'></i> +1 (269) 993 - 4813</p>
         <p className='email'><i className='fas fa-envelope'></i> tactica3@yahoo.com</p>
       </div>
 
