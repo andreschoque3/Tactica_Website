@@ -100,11 +100,11 @@ function Home() {
             </div>
 
             <div className='picture'>
-              <img src={videoImg2} alt="pciture1"/>
+              <img src={videoImg2} alt="pciture2"/>
             </div>
 
             <div className='picture'>
-              <img src={videoImg3} alt="pciture1"/>
+              <img src={videoImg3} alt="pciture3"/>
             </div>
          </div>
       </div>

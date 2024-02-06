@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './Styles/Give.css'
 import { Link } from 'react-router-dom'
 import Navbar from '../Components/Navbar/Navbar'
@@ -10,6 +10,8 @@ import donImg4 from '../Images/donation-pic4.jpg'
 import donImg5 from '../Images/donation-pic5.jpg'
 
 const Give = () => {
+
+  // Links to donate
 
   const handleTacticaMinistriesBtn = () => {
     const paypalUrl = 'https://www.paypal.com/paypalme/tacticaministries?country.x=US&locale.x=en_US'
@@ -29,6 +31,13 @@ const Give = () => {
     window.open(abwesecondUrl, '_blank')
   }
 
+  // Scroll effect
+  const missStatRef = useRef(null);
+  
+  const handleScrollToMissStat = () => {
+    missStatRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
   <div>
 
@@ -37,12 +46,12 @@ const Give = () => {
     <section className='header-section-gv'>
       <div className='text-box-gv'>
         <h1 className='title-gv'>Give Today</h1>
-        <a className='btn-gv-1'>Give Options</a>
+        <a className='btn-gv-1' onClick={handleScrollToMissStat}>Give Options</a>
       </div>
 
     </section>
 
-    <section className='donation-gv'>
+    <section className='donation-gv' ref={missStatRef}>
         <h1>Make a Donation Today</h1>
         <p>There are a variety of ways to come alongside TACTICA Ministries. Explore below the following giving opportunities: Support the TATICA general ministry fund; provide funding for the personal ministry of TACTICA's founders, Ryan and Gretchen Rought; Donate equipment, gear, apparel, and/or merchandise to be used in the ministry; Give towards the TACTICA Bible project; Make a donation for an individual participating on a TACTICA mission trip.</p>
         <br />
