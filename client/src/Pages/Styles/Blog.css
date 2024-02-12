@@ -93,7 +93,7 @@
 
 /****** Blogs Section ******/
 
-.post-1, .post-2 {
+.blog-post{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -123,12 +123,12 @@
     height: 35%;
 }
 
-.post-1 h3 {
+.blog-post h3 {
     margin-left: 20px;
     margin-top: 10px;
 }
 
-.post-1 h2 {
+.blog-post h2 {
     font-size: 27px;
     margin-bottom: 15px;
     margin-top: 15px;
@@ -136,7 +136,7 @@
     color: gray;
 }
 
-.post-1 p {
+.blog-post p {
     font-size: 20px;
     padding: 8px 16px;
     border-radius: 4px;
@@ -145,40 +145,33 @@
     margin-bottom: 20px;
 }
 
-.post-1 a {
+.blog-post a {
     color: red;
     font-size: 20px;
     margin-left: 34%;
     position: relative;
+    text-decoration: none;
 }
 
-.post-2 h3 {
-    margin-left: 20px;
-    margin-top: 10px;
-}
-
-.post-2 h2 {
-    font-size: 27px;
-    margin-bottom: 15px;
-    margin-top: 15px;
-    text-align: center;
-    color: gray;
-}
-
-.post-2 p {
-    font-size: 20px;
-    padding: 8px 16px;
-    border-radius: 4px;
-    text-align: center;
-    color: gray;
-    margin-bottom: 20px;
-}
-
-.post-2 a {
+.expand-btn a, .hide-btn a {
+    display: inline-block;
+    text-decoration: none;
     color: red;
+    border: 1px solid red;
+    border-radius: 500px;
+    padding: 20px 45px;
     font-size: 20px;
-    margin-left: 34%;
     position: relative;
+    background: transparent;
+    margin-left: 42.5%;
+    cursor: pointer;
+}
+
+.expand-btn a:hover, .hide-btn a:hover {
+    border: 1px solid red;
+    background: red;
+    transition: 1s;
+    color: #fff;
 }
 
 /****** Responsiveness ******/
@@ -240,19 +233,11 @@
         font-size: 15px;  
     }
 
-    .post-1 h2 {
+    .blog-post h2 {
         font-size: 20px;
     }
 
-    .post-1 p {
-        font-size: 18px;
-    }
-
-    .post-2 h2 {
-        font-size: 20px;
-    }
-
-    .post-2 p {
+    .blog-post p {
         font-size: 18px;
     }
 

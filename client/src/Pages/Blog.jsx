@@ -1,4 +1,5 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import './Styles/Blog.css'
 import Navbar from '../Components/Navbar/Navbar'
 import Footer from '../Components/Footer/Footer'
@@ -16,6 +17,17 @@ const Blog = () => {
   
   const handleScrollToMissStat = () => {
     missStatRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  // Hide and show extra blog entries
+  const [showExtraBlogs, setShowExtraBlogs] = useState(false);
+
+  const handleClick = () => {
+    setShowExtraBlogs(true); 
+  };
+
+  const handleHideClick = () => {
+    setShowExtraBlogs(false);
   };
 
   return (
@@ -42,62 +54,95 @@ const Blog = () => {
 
     <section className='blog-posts'>
 
-        <div className='post-1'>
-          <div className='blog'>
-            <img src={artPic1} alt="blog1" />
+        <div className='blog-post'>
+          <div className='blog' id='1'>
+            <img src={artPic1} alt="Baptist church honors law enforcement" />
             <h3>Daily News</h3>
             <h2>Baptist Church Honors Law Enforcement</h2>
             <p>Portage - More than 40 men and women who help make society a safer place were the focus of attention Sunday at Berean...</p>
-            <a className='rd-btn'>Read More</a>
+            <Link to="/Blog_1">Read More</Link>
           </div>
 
-          <div className='blog'>
-            <img src={artPic2} alt="Blog2" />
+          <div className='blog' id='2'>
+            <img src={artPic2} alt="GOE Commanders trained in swatt tactics" />
             <h3>Daily News</h3>
             <h2>GOE Commanders trained in SWATT Tactics</h2>
             <p>Guano - The afternoon of this Friday, September 18, at the Special Operations Group of the Special Operations Group...</p>
             <a>Read More</a>
           </div>
 
-          <div className='blog'>
-            <img src={artPic3} alt="blog3" />
+          <div className='blog' id='3'>
+            <img src={artPic3} alt="Tactica mens gathering november 2023" />
             <h3>Daily News</h3>
-            <h2>lorem ipsum dolor sit amet consectur abdui</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt kid adi mundi</p>
+            <h2>TACTICA Men's Gathering: Nov 2023</h2>
+            <p>The TACTICA Ministry Center was recently the site for a men's gathering. The building was full of life and food and relationships...</p>
             <a>Read More</a>
           </div>
+
+          <div className='blog' id='4'>
+            <img src={artPic4} alt="all because he collided with jesus" />
+            <h3>Testimonies</h3>
+            <h2>All because he COLLIDED with JESUS</h2>
+            <p>TACTICA’s influence on the Costa Rican police model has been unusual. Ryan and his family arrived at a key moment for the country...</p>
+            <a>Read More</a>
+          </div>
+
+          <div className='blog' id='5'>
+            <img src={artPic5} alt="tactical medicine & the Gospel for Paramedics" />
+            <h3>Testimonies</h3>
+            <h2>Tactical Medincine & the Gospel for Paramedics</h2>
+            <p>TACTICA Force Multiplier partners recently provided training at the university for new paramedics...</p>
+            <a>Read More</a>
+          </div>
+
+          <div className='blog' id='6'>
+            <img src={artPic6} alt="a glance into the work of the ecuadorian special operations group" />
+            <h3>Ministry Work</h3>
+            <h2>A Glance into the Work of the Ecuadorian Special Operations Group</h2>
+            <p>TACTICA has provided tactical, medical, and leadership training on numerous occasions to the Ecuadorian GOE team...</p>
+            <a>Read More</a>
+          </div>
+
+          {showExtraBlogs && (
+            <>
+              <div className='blog' id='7'>
+                <img src="" alt="Burdened for those Silently Suffering in the Public Safety Community" />
+                <h3>Daily Prayer</h3>
+                <h2>Burdened for those Silently Suffering in the Public Safety Community</h2>
+                <p>Headlines across the country remind us that the weight, stress, and trauma of the public safety career are aspects we absolutely cannot overlook...</p>
+                <a>Read More</a>
+              </div>
+
+              <div className='blog' id='8'>
+                <img src="" alt="Summary of a recent conversation Burnout is real" />
+                <h3>Reflections</h3>
+                <h2>Summary of a recent conversation: Burnout is real</h2>
+                <p>Toxic but common lies- Big boys don’t cry. Real men are not emotional. If you “feel” the wrong thing, you are defective. Censor who you are before you go out there....</p>
+                <a>Read More</a>
+              </div>
+            </>
+          )}
+
         </div>
 
-        <div className='post-2'>
-          <div className='blog'>
-            <img src={artPic4} alt="blog4" />
-            <h3>Ministry</h3>
-            <h2>lorem ipsum dolor sit amet consectur abdui</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt kid adi mundi</p>
-            <a>Read More</a>
+        {!showExtraBlogs ? (
+          <div className='expand-btn'>
+            <a onClick={handleClick}>Click to Expand</a>
           </div>
 
-          <div className='blog'>
-            <img src={artPic5} alt="blog5" />
-            <h3>Devotions</h3>
-            <h2>lorem ipsum dolor sit amet consectur abdui</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt kid adi mundi</p>
-            <a>Read More</a>
+        ) : (
+          <div className='hide-btn'>
+            <a onClick={handleHideClick}>Click to Hide</a>
           </div>
+        )}
 
-          <div className='blog'>
-            <img src={artPic6} alt="blog6" />
-            <h3>Daily Prayer</h3>
-            <h2>lorem ipsum dolor sit amet consectur abdui</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt kid adi mundi</p>
-            <a>Read More</a>
-          </div>
-        </div>
     </section>
 
     <Footer/>
     
   </div>
+
   )
 }
+
 export default Blog
