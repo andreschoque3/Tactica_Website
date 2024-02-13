@@ -1,13 +1,13 @@
 import React, { useRef } from 'react'
-import './Styles/Give.css'
+import './Give.css'
 import { Link } from 'react-router-dom'
-import Navbar from '../Components/Navbar/Navbar'
-import Footer from '../Components/Footer/Footer'
-import donImg1 from '../Images/donation-pic1.jpg'
-import donImg2 from '../Images/Ryan-Gretchen-Rought-2023.jpeg'
-import donImg3 from '../Images/donation-pic3.JPG'
-import donImg4 from '../Images/donation-pic4.jpg'
-import donImg5 from '../Images/donation-pic5.jpg'
+import Navbar from '../../Components/Navbar/Navbar'
+import Footer from '../../Components/Footer/Footer'
+import donImg1 from './Images/donation-pic1.jpg'
+import donImg2 from '../../Images/Ryan-Gretchen-Rought-2023.jpeg'
+import donImg3 from './Images/donation-pic3.JPG'
+import donImg4 from './Images/donation-pic4.jpg'
+import donImg5 from './Images/donation-pic5.jpg'
 
 const Give = () => {
 

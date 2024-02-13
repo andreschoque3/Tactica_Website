@@ -1,14 +1,14 @@
 import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import './Styles/Blog.css'
-import Navbar from '../Components/Navbar/Navbar'
-import Footer from '../Components/Footer/Footer'
-import artPic1 from '../Images/article-pic1.png'
-import artPic2 from '../Images/article-pic2.png'
-import artPic3 from '../Images/blog-article-3-2.png'
-import artPic4 from '../Images/article-pic4.png'
-import artPic5 from '../Images/article-pic5.png'
-import artPic6 from '../Images/article-pic6.png'
+import './Blog.css'
+import Navbar from '../../Components/Navbar/Navbar'
+import Footer from '../../Components/Footer/Footer'
+import artPic1 from './Images/article-pic1.png'
+import artPic2 from './Images/article-pic2.png'
+import artPic3 from '../../Images/blog-article-3-2.png'
+import artPic4 from './Images/article-pic4.png'
+import artPic5 from './Images/article-pic5.png'
+import artPic6 from './Images/article-pic6.png'
 
 const Blog = () => {
 

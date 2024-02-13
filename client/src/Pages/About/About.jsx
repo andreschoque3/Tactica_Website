@@ -1,8 +1,8 @@
 import React, { useRef } from 'react'
-import "./Styles/About.css"
-import Navbar from '../Components/Navbar/Navbar'
-import Footer from '../Components/Footer/Footer'
-import founderImg from '../Images/Ryan-Gretchen-Rought-2023.jpeg'
+import "./About.css"
+import Navbar from '../../Components/Navbar/Navbar'
+import Footer from '../../Components/Footer/Footer'
+import founderImg from '../../Images/Ryan-Gretchen-Rought-2023.jpeg'
 
 const About = () => {
 

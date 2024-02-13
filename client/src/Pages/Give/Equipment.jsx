@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './Styles/Equipment.css'
-import Navbar from '../Components/Navbar/Navbar'
-import Footer from '../Components/Footer/Footer'
-import item1 from '../Images/item-1.png'
-import item2 from '../Images/item-2.jpeg'
-import item3 from '../Images/item-3.png'
-import item4 from '../Images/item-4.jpeg'
+import './Equipment.css'
+import Navbar from '../../Components/Navbar/Navbar'
+import Footer from '../../Components/Footer/Footer'
+import item1 from './Images/item-1.png'
+import item2 from './Images/item-2.jpeg'
+import item3 from './Images/item-3.png'
+import item4 from './Images/item-4.jpeg'
 
 const Equipment = () => {
 

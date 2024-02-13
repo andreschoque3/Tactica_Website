@@ -1,7 +1,7 @@
-import React, { useRef} from 'react'
-import './Styles/Serve.css'
-import Navbar from '../Components/Navbar/Navbar'
-import Footer from '../Components/Footer/Footer'
+import React from 'react'
+import './Serve.css'
+import Navbar from '../../Components/Navbar/Navbar'
+import Footer from '../../Components/Footer/Footer'
 
 const Serve = () => {
 
