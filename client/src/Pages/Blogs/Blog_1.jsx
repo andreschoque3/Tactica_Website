@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './Blog_1.css'
+import './Blog_post.css'
 import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
+import BlogPic1 from '../../Images/blog-article-1.png'
 
 const Blog_1 = () => {
   return (
@@ -12,10 +13,10 @@ const Blog_1 = () => {
 
       <div className='blog-container'>
         <h1>Police Force, Faith Intertwine As Portages Berean Baptist Church Honors Law Enforcement</h1>
-        <h5>Tactica Ministries | Oct. 4, 2017</h5>
-        <img src="" alt="Police Force Faith Intertwine as Portage Bearean Baptist Church Honors Law Enforcement"></img>
+        <h5>TACTICA Ministries | Oct. 4, 2017</h5>
+        <img src={BlogPic1} alt="Police Force Faith Intertwine as Portage Bearean Baptist Church Honors Law Enforcement"></img>
 
-        <p>PORTAGE — More than 40 men and women who help make society a safer place were the focus of attention Sunday at Berean Baptist Church.</p>
+        <p className='bold'>PORTAGE — More than 40 men and women who help make society a safer place were the focus of attention Sunday at Berean Baptist Church.</p>
 
         <p>Thirteen law-enforcement departments, including seven members from Costa Rica’s National Police Force, were represented during the 
           morning worship overseen by Pastor Steve Nichols. Afterward, the officers were the guests of honor at a churchwide luncheon.
@@ -23,7 +24,7 @@ const Blog_1 = () => {
 
         <p>Nichols said every Sunday service is special, but this one was unique in its own way.</p>
 
-        <p>“Police officers, because of their line of work and the potential dangers they may face every day, need every source of protection 
+        <p className='italics'>“Police officers, because of their line of work and the potential dangers they may face every day, need every source of protection 
           they can get,” Nichols said. “Those here today came on their own, they came because of their faith and belief in Christ.”
         </p>
 
@@ -56,7 +57,7 @@ const Blog_1 = () => {
 
         <p>Nichols said he has enjoyed spending time with the seven and is impressed with their religious devotion.</p>
 
-        <p>“I look at these seven commando guys esteemed in their (occupational) position who look death in the face every day and it’s clear that 
+        <p className='italics'>“I look at these seven commando guys esteemed in their (occupational) position who look death in the face every day and it’s clear that 
           Christianity is not for sissies,” he said.
         </p>
 
@@ -64,7 +65,7 @@ const Blog_1 = () => {
           in his career.
         </p>
 
-        <p>“I made calls when we got back to Michigan a few weeks ago to let these Christian brothers and sisters know what the church was offering 
+        <p className='italics'>“I made calls when we got back to Michigan a few weeks ago to let these Christian brothers and sisters know what the church was offering 
           to do for us,” he said. “I’m not surprised so many showed up … It’s great, and this was a first-class service here today.”
         </p>
 

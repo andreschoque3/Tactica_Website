@@ -12,7 +12,6 @@ import donImg5 from '../Images/donation-pic5.jpg'
 const Give = () => {
 
   // Links to donate
-
   const handleTacticaMinistriesBtn = () => {
     const paypalUrl = 'https://www.paypal.com/paypalme/tacticaministries?country.x=US&locale.x=en_US'
 
