@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import "./About.css"
 import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
-import founderImg from '../../Images/Ryan-Gretchen-Rought-2023.jpeg'
+import founderImg from '../../Images/ryan-gretchen-rought-2023-2.jpg'
 
 const About = () => {
 
