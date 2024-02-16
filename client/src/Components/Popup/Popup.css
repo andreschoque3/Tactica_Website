@@ -18,7 +18,7 @@
     position: relative;
     padding: 32px;
     width: 100%;
-    max-width: 1140px;
+    max-width: 1240px;
     background-color: #fff;
 }
 
@@ -45,16 +45,19 @@
 
 .popup-inner img {
     position: absolute;
-    margin-left: -13.3%;
+    margin-left: 4%;
 }
 
 .popup-inner h2 {
     text-align: left;
-    padding-left: 14px;
+    padding-left: 58.7%;
     
 }
 
 .popup-inner p {
+    padding-top: 10px;
+    width: 35%;
+    margin-left: 59%;
+    padding-bottom: 10px;
     text-align: left;
-    padding-left: 17px;
 }

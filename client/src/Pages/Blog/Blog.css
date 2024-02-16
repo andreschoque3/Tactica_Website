@@ -52,36 +52,36 @@
     font-size: 45px;
     padding-top: 20px;
     padding-bottom: 20px;
-    color: gray;
+    color: black;
 }
 
 .newsletter-sect p {
     text-align: center;
     font-size: 20px;
-    color: gray;
+    color: black;
     padding-bottom: 20px;
     margin-left: 10px;
 }
 
 .form-box input {
     position: relative;
-    margin-left: 24%;
+    margin-left: 31%;
     border: solid red;
     border-width: 8px;
     border-radius: 5px;
-    height: 60px;
-    width: 600px;
+    height: 50px;
+    width: 400px;
     font-size: 20px;
     font-style: italic;
     padding-left: 25px;
-    color: gray;
+    color: black;
 }
 
 .form-box button {
     position: relative;
     border: red;
     background-color: red;
-    height: 60px;
+    height: 50px;
     width: 205px;
     border-radius: 5px;
     font-size: 20px;
@@ -102,13 +102,14 @@
 
 .blog {
     width: 345px;
+    height: 500px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     margin: 35px;
     transition: 0.5s ease;
     cursor: pointer;
-    border-color: gray;
+    border-color: black;
     border-width: 5px;
     border-style: solid;
 }
@@ -133,7 +134,7 @@
     margin-bottom: 15px;
     margin-top: 15px;
     text-align: center;
-    color: gray;
+    color: black;
 }
 
 .blog-post p {
@@ -141,7 +142,7 @@
     padding: 8px 16px;
     border-radius: 4px;
     text-align: center;
-    color: gray;
+    color: black;
     margin-bottom: 20px;
 }
 

@@ -1,46 +1,48 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
+import Slider from 'react-slick';
 import "./Home.css"
 import card1 from "./Images/card-pic1.JPG"
 import card2 from "./Images/card-pic2.jpg"
 import card3 from "./Images/card-pic3.JPG"
 import card4 from "./Images/card-pic4.jpg"
-import videoImg1 from "./Images/vid-pic1.jpg"
-import videoImg2 from "./Images/vid-pic2.jpg"
-import videoImg3 from "./Images/vid-pic3.jpg"
+import vid1 from "../../Images/tactica-into.mp4"
+import vid2 from "../../Images/tactica-ecuador-oct-2023.mp4"
+import vid3 from "../../Images/tactica-naples.mp4"
 import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function Home() {
 
-  // Carousel/'slider' effect
-
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % 3);
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />
   };
 
-  const prevSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide - 1 + 3) % 3);
-  };
-
-  const goToSlide = (index) => {
-    setCurrentSlide(index);
-  };
-
-  const totalSlides = 3;
-
-  const calculateTranslateX = () => {
-    const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-    
-    if (screenWidth < 800) {
-      return `${-currentSlide * (90 / totalSlides)}%`;
-    } else {
-      return `${-currentSlide * (300 / totalSlides)}%`;
-    }
-  };
+  function NextArrow(props) {
+    const { className, onClick } = props;
+    return (
+      <div className={className} onClick={onClick}>
+        <i className='fas fa-arrow-right' alt="next" style={{color: 'black', fontSize: '24px'}}></i>
+      </div>
+    );
+  }
+  
+  function PrevArrow(props) {
+    const { className, onClick } = props;
+    return (
+      <div className={className} onClick={onClick}>
+        <img src="prev-arrow.png" alt="Previous" />
+      </div>
+    );
+  }
 
 
   return (
@@ -93,38 +95,32 @@ function Home() {
 
       <section className='tactica-vids'>
 
-      <div className='slider'>
-        <div className='slide' style={{ transform: `translateX(${calculateTranslateX()})` }}>
-            <div className='picture'>
-              <img src={videoImg1} alt="pciture1" />
-            </div>
-
-            <div className='picture'>
-              <img src={videoImg2} alt="pciture2"/>
-            </div>
-
-            <div className='picture'>
-              <img src={videoImg3} alt="pciture3"/>
-            </div>
-         </div>
-      </div>
-
         <div className='title-vids'>
           <h1>TACTICA Ministries Media</h1>
         </div>
 
-        <div className='arrows'>
-          <button id="prev" onClick={prevSlide}><i className="fas fa-arrow-left"></i></button>
-          <button id="next" onClick={nextSlide}><i className="fas fa-arrow-right"></i></button>
-        </div>
+        <div className='video-carousel'>
+          <Slider {...settings}>
+            <div className='frame'>
+              <video controls className='video-element'>
+                <source src={vid1} type='video/mp4' />
+              </video>
+            </div>
 
-        <div className='dots'>
-          <ul className='dot-list'>
-          <li className={currentSlide === 0 ? 'active' : ''} onClick={() => goToSlide(0)}></li>
-          <li className={currentSlide === 1 ? 'active' : ''} onClick={() => goToSlide(1)}></li>
-          <li className={currentSlide === 2 ? 'active' : ''} onClick={() => goToSlide(2)}></li>
-          </ul>
-        </div>
+            <div className='frame'>
+              <video controls className='video-element'>
+                <source src={vid2} type='video/mp4' />
+              </video>
+            </div>
+
+            <div className='frame'>
+              <video controls className='video-element'>
+                <source src={vid3} type='video/mp4' />
+              </video>
+            </div>
+          </Slider>
+      </div>
+
       </section>
 
       <Footer />

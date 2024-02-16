@@ -27,7 +27,7 @@ const Navbar = () => {
       <div className='nav-bottom'>
         <nav className='second'>
           <ul className='nav-menu'>
-            <li><Link to="/Home" id='home-link'>Home</Link></li>
+            <li><Link to="/" id='home-link'>Home</Link></li>
             <li><Link to="/About" id='about-link'>About</Link></li>
             <li><Link to="/Blog" id='blog-link'>Blog</Link></li>
             <li><Link to="/Serve" id='serve-link'>Serve</Link></li>
