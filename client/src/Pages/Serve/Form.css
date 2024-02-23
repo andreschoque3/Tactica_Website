@@ -1,0 +1,66 @@
+.form-container h1 {
+    text-align: center;
+    font-size: 46px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    color: black;
+}
+
+.form-container hr {
+    background: black;
+    width: 25%;
+    height: 5px;
+    margin: auto;
+    border: black;
+    margin-bottom: 40px;
+}
+
+.personal-details-block h2, .passport-details-block h2, .address-details-block h2, .demographic-details-block h2 {
+    padding-left: 50px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-size: 30px;
+}
+
+.personal-details-block form, .forms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.field select {
+    width: 80%;
+    height: 52%;
+    padding: 14px;
+    background: lightgray;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 15px;
+    font-size: 20px;
+  }
+
+  .field input {
+    color: black;
+  }
+
+.field {
+    display: flex;
+    width: calc(33.33% - 10px);
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.field label {
+    align-self: flex-start;
+    padding-left: 50px;
+    font-weight: bold;
+}
+
+.field ul {
+    display: flex;
+}

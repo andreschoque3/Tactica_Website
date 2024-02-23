@@ -6,9 +6,9 @@ import card1 from "./Images/card-pic1.JPG"
 import card2 from "./Images/card-pic2.jpg"
 import card3 from "./Images/card-pic3.JPG"
 import card4 from "./Images/card-pic4.jpg"
-import vid1 from "../../Images/tactica-into.mp4"
-import vid2 from "../../Images/tactica-ecuador-oct-2023.mp4"
-import vid3 from "../../Images/tactica-naples.mp4"
+import vid1 from "./Images/tactica-into.mp4"
+import vid2 from "./Images/tactica-ecuador-oct-2023.mp4"
+import vid3 from "./Images/tactica-naples.mp4"
 import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
 import "slick-carousel/slick/slick.css";
@@ -23,14 +23,23 @@ function Home() {
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />
+    prevArrow: <PrevArrow />,
+    appendDots: dots => (
+      <div style={{ textAlign: "center" }}>
+      <ul style={{ margin: "0px", padding: "0px", display: "inline-block", listStyle: "none" }}> 
+        {React.Children.map(dots, dot => (
+          <li style={{ display: "inline-block", margin: "0 5px"}}>{dot}</li>
+        ))}
+      </ul>
+    </div>
+    )
   };
 
   function NextArrow(props) {
     const { className, onClick } = props;
     return (
       <div className={className} onClick={onClick}>
-        <i className='fas fa-arrow-right' alt="next" style={{color: 'black', fontSize: '24px'}}></i>
+        <i className='fas fa-arrow-right' alt="next"></i>
       </div>
     );
   }
@@ -39,7 +48,7 @@ function Home() {
     const { className, onClick } = props;
     return (
       <div className={className} onClick={onClick}>
-        <img src="prev-arrow.png" alt="Previous" />
+        <i className='fas fa-arrow-left' alt="back"></i>
       </div>
     );
   }

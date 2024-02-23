@@ -142,17 +142,44 @@
 
 /****** Videos Section ******/
 
+.title-vids {
+  text-align: center;
+  font-size: 35px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 
 .video-carousel {
-  width: 80%; /* Adjust the width of the carousel container as needed */
-  margin: 0 auto; /* Center the carousel horizontally */
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 50px; 
+}
+
+.fa-arrow-right {
+  position: absolute;
+  color: black; 
+  font-size: 24px; 
+  margin-left: 30px;
+}
+
+.fa-arrow-left {
+  position: absolute;
+  color: black; 
+  font-size: 24px; 
+  margin-left: -70px;
 }
 
 .video-element {
   width: 100%;
-  height: auto; /* Ensure each frame takes up the full width of its container */
+  height: auto;
 }
 
+.slick-dots li button {
+  width: 12px;
+  height: 12px; 
+  border-radius: 50%; 
+  background-color: #ccc; 
+}
 
 
 

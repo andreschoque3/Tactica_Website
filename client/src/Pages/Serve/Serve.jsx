@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Serve.css'
 import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
@@ -13,7 +14,7 @@ const Serve = () => {
     <section className='header-section-sv'>
       <div className='text-box-sv'>
         <h1 className='sv-h1'>How to Serve in the Ministry</h1>
-        <a className='btn-sv-1'>Get Involved</a>
+        <Link to='/Form' className='btn-sv-1'>Get Involved</Link>
       </div>
     </section>
 
