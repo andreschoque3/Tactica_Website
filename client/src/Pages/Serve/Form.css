@@ -15,14 +15,21 @@
     margin-bottom: 40px;
 }
 
-.personal-details-block h2, .passport-details-block h2, .address-details-block h2, .demographic-details-block h2 {
+.demo-details-block h2 {
     padding-left: 50px;
     padding-bottom: 20px;
     padding-top: 20px;
     font-size: 30px;
 }
 
-.personal-details-block form, .forms {
+.details-block h2 {
+    padding-left: 50px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-size: 30px;
+}
+
+.details-block form, .forms {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -41,9 +48,42 @@
     font-size: 20px;
   }
 
-  .field input {
-    color: black;
-  }
+.specific-field select {
+    width: 80%;
+    height: 65%;
+    padding: 14px;
+    background: lightgray;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.specific-field {
+    display: flex;
+    width: calc(33.33% - 10px);
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.specific-field label {
+    align-self: flex-start;
+    padding-left: 50px;
+    font-weight: bold;
+}
+
+.sub-field{
+    display: flex;
+    width: calc(102% - 10px);
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 
 .field {
     display: flex;
@@ -61,6 +101,152 @@
     font-weight: bold;
 }
 
-.field ul {
-    display: flex;
+.radio-label {
+    font-weight: bold;
+    padding-left: 50px;
 }
+
+.radio-field ul {
+    list-style: none;
+    display: flex;
+    padding-left: 50px;
+    gap: 50px;
+    text-align: center;
+}
+
+.form-btn-1 {
+    display: inline-block;
+    text-decoration: none;
+    color: red;
+    border: 1px solid red;
+    border-radius: 500px;
+    padding: 20px 45px;
+    font-size: 20px;
+    position: relative;
+    background: transparent;
+    margin-left: 36.5%;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    
+}
+.form-btn-2 {
+    display: inline-block;
+    text-decoration: none;
+    color: red;
+    border: 1px solid red;
+    border-radius: 500px;
+    padding: 20px 45px;
+    font-size: 20px;
+    position: relative;
+    background: transparent;
+    margin-left: 10%;
+    cursor: pointer;
+    position: absolute;
+    margin-top: 30px;
+}
+
+.form-btn-3 {
+    display: inline-block;
+    text-decoration: none;
+    color: red;
+    border: 1px solid red;
+    border-radius: 500px;
+    padding: 20px 45px;
+    font-size: 20px;
+    position: relative;
+    background: transparent;
+    margin-left: 0.5%;
+    cursor: pointer;
+    position: absolute;
+    margin-top: 30px;
+}
+
+.form-btn-1:hover, .form-btn-2:hover, .form-btn-3:hover {
+    border: 1px solid red;
+    background: red;
+    transition: 1s;
+    color: #fff;
+}
+
+.paragraph textarea {
+    width: 100%;
+    margin-left: 50px;
+
+}
+
+.paragraph label {
+    align-self: flex-start;
+    padding-left: 50px;
+    font-weight: bold;
+}
+
+.field p {
+    position: absolute;
+    padding-left: 15%;
+    font-style: italic;
+    color: gray;
+}
+
+.fa-plus {
+    position: absolute;
+    margin-right: 30%;
+    cursor: pointer;
+}
+
+.fa-minus {
+    position: absolute;
+    margin-left: 10px;
+    margin-bottom: 40px;
+}
+
+.sub-fields {
+    margin-left: 50px;
+}
+
+.sub-fields label {
+    padding-left: 3px;
+}
+
+.sub-fields select {
+    margin-bottom: 40px;
+}
+
+.radio-field-1 ul {
+    list-style: none;
+    padding-right: 100px;
+    text-align: center;
+}
+
+/* tooltip container */
+.tooltip {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 360px;
+    background-color: gray;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+

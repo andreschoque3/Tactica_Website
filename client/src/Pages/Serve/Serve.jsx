@@ -14,7 +14,7 @@ const Serve = () => {
     <section className='header-section-sv'>
       <div className='text-box-sv'>
         <h1 className='sv-h1'>How to Serve in the Ministry</h1>
-        <Link to='/Form' className='btn-sv-1'>Get Involved</Link>
+        <Link to='/Application_Form_1' className='btn-sv-1'>Get Involved</Link>
       </div>
     </section>
 

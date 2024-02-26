@@ -15,7 +15,9 @@ import Blog_5 from './Pages/Blog_Posts/Blog_5'
 import Blog_6 from './Pages/Blog_Posts/Blog_6'
 import Blog_7 from './Pages/Blog_Posts/Blog_7'
 import Blog_8 from './Pages/Blog_Posts/Blog_8'
-import Form from './Pages/Serve/Form'
+import Form_1 from './Pages/Serve/Application Form/Application_Form_1'
+import Form_2 from './Pages/Serve/Application Form/Application_Form_2'
+import Form_3 from './Pages/Serve/Application Form/Application_Form_3'
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Equipment from './Pages/Give/Equipment'
@@ -43,7 +45,9 @@ function App() {
           <Route path='/Blog_6' element={<Blog_6/>}/>
           <Route path='/Blog_7' element={<Blog_7/>}/>
           <Route path='/Blog_8' element={<Blog_8/>}/>
-          <Route path='/Form' element={<Form/>}/>
+          <Route path='/Application_Form_1' element={<Form_1/>}/>
+          <Route path='/Application_Form_2' element={<Form_2/>}/>
+          <Route path='/Application_Form_3' element={<Form_3/>}/>
         </Routes>
       </BrowserRouter>
     </div>

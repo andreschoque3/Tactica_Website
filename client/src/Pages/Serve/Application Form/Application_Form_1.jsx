@@ -1,15 +1,24 @@
-import React from 'react'
-import './Form.css'
-import Navbar from '../../Components/Navbar/Navbar'
-import Footer from '../../Components/Footer/Footer'
+import React, {useState} from 'react'
+import { Link } from 'react-router-dom'
+import '../../Serve/Form.css'
+import Navbar from '../../../Components/Navbar/Navbar'
+import Footer from '../../../Components/Footer/Footer'
 
-const Form = () => {
+const Application_Form_1 = () => {
 
   // phone regex
   function handlePhoneInput(event) {
     const enteredValue = event.target.value;
     event.target.value = enteredValue.replace(/[^0-9()-]/g, ''); // Remove any characters other than numbers, dashes, and parentheses
-}
+  }
+
+  // size selection
+  const [selectedSize, setSelectedSize] = useState(null);
+
+  const handleSizeChange = (event) => {
+    const newSize = event.target.value;
+    setSelectedSize((prevSize) => (prevSize === newSize ? null : newSize));
+  };
 
   return (
     <div>
@@ -18,7 +27,7 @@ const Form = () => {
               <h1>Application Form</h1>
               <hr />
               
-              <div className='personal-details-block'>
+              <div className='details-block'>
                 <h2>Personal Details</h2>
 
                 <form action="">
@@ -58,7 +67,7 @@ const Form = () => {
 
                         <div className='field'>
                           <label>Email</label>
-                          <input type="text" placeholder='Enter email' required/>
+                          <input type="email" placeholder='Enter email' required/>
                         </div>
                         
                   </div>
@@ -68,7 +77,7 @@ const Form = () => {
               </div>
 
               
-              <div className='passport-details-block'>
+              <div className='details-block'>
                 <h2>Passport Details</h2>
 
                 <form action="">
@@ -110,7 +119,7 @@ const Form = () => {
 
               </div>
 
-              <div className='address-details-block'>
+              <div className='details-block'>
                 <h2>Address Details</h2>
 
                 <form action="">
@@ -152,7 +161,7 @@ const Form = () => {
 
               </div>
 
-              <div className='demographic-details-block'>
+              <div className='demo-details-block'>
                 <h2>Demographic Details</h2>
 
                 <form action="">
@@ -178,15 +187,39 @@ const Form = () => {
                           <input type="text" placeholder='Enter weight' required/>
                         </div>
 
-                        <div className='field'>
-                          <label>T-shirt Size</label>
+                        <div className='radio-field'>
+                          <label className='radio-label'>T-shirt Size</label>
                           <ul>
-                            <li><input type="radio" name="" id="" />S</li>
-                            <li><input type="radio" name="" id="" />M</li>
-                            <li><input type="radio" name="" id="" />L</li>
-                            <li><input type="radio" name="" id="" />XL</li>
-                            <li><input type="radio" name="" id="" />XXL</li>
-                            <li><input type="radio" name="" id="" />XXXL</li>
+                            <li>
+                              <input type="radio" name="size" id="size-s" value='S' checked={selectedSize === 'S'} onChange={handleSizeChange} />
+                              <label htmlFor="size-s">S</label>
+                            </li>
+
+                            <li>
+                              <input type="radio" name="size" id="size-m" value='M' checked={selectedSize === 'M'} onChange={handleSizeChange} />
+                              <label htmlFor="size-m">M</label>
+                            </li>
+                            
+                            <li>
+                              <input type="radio" name="size" id="size-l" value='L' checked={selectedSize === 'L'} onChange={handleSizeChange}/>
+                              <label htmlFor="size-l">L</label>
+                            </li>
+                            
+                            <li>
+                              <input type="radio" name="size" id="size-xl" value='XL' checked={selectedSize === 'XL'} onChange={handleSizeChange} />
+                              <label htmlFor="size-xl">XL</label>
+                            </li>
+                            
+                            <li>
+                              <input type="radio" name="size" id="size-xxl" value='XXL' checked={selectedSize === 'XXL'} onChange={handleSizeChange} />
+                              <label htmlFor="size-xxl">XXL</label>
+                            </li>
+                            
+                            <li>
+                              <input type="radio" name="size" id="size-xxxl" value='XXXL' checked={selectedSize === 'XXXL'} onChange={handleSizeChange} />
+                              <label htmlFor="size-xxxl">XXXL</label>
+                            </li>
+                          
                           </ul>
                         </div>
                         
@@ -195,8 +228,9 @@ const Form = () => {
                 </form>
 
               </div>
-
-              <button className='next-btn'>Next</button>
+              
+              <button type='submit' className='form-btn-1'>Save</button>
+              <Link className='form-btn-2' to='/Application_Form_2'>Next</Link>
 
           </div>
         <Footer/>
@@ -204,4 +238,4 @@ const Form = () => {
   )
 }
 
-export default Form
+export default Application_Form_1
