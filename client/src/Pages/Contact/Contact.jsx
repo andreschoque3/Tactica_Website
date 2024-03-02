@@ -1,9 +1,40 @@
 import React from 'react'
+import {toast} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 import './Contact.css'
 import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
 
 const Contact = () => {
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "efae9b3c-bf15-4bd7-91ed-ff9435feb4d9");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      console.log("Success", res);
+      toast.success("Email successfully sent.")
+    }
+    else {
+      console.log("Error", res)
+      toast.error("Error while sending email.")
+    }
+  };
+
   return (
   <div>
     <Navbar/>
@@ -23,8 +54,8 @@ const Contact = () => {
       </div>
 
       <div className='contact-fm'>
-        <form action="">
-          <input type="text" name='Name' placeholder='Name' required />
+        <form action="" onSubmit={onSubmit}>
+          <input type="text" name='Name' placeholder='Name' required/>
           <input type="email" name='Email' placeholder='Email' required />
           <input type="text" name='Subject' placeholder='Subject' required/>
           <textarea name="Message" id="" rows="6" placeholder='Message'></textarea>

@@ -28,11 +28,11 @@ const Application_Form_1 = () => {
               <hr />
               
               <div className='details-block'>
-                <h2>Personal Details</h2>
 
                 <form action="">
+                  <h2>Personal Details</h2>
                   <div className='forms'>
-                    
+
                         <div className='field'>
                           <label>Full Name</label>
                           <input type="text" placeholder='Enter full name' required/>
@@ -230,7 +230,7 @@ const Application_Form_1 = () => {
               </div>
               
               <button type='submit' className='form-btn-1'>Save</button>
-              <Link className='form-btn-2' to='/Application_Form_2'>Next</Link>
+              <Link className='form-btn-2' to='/Application-Form-2'>Next</Link>
 
           </div>
         <Footer/>

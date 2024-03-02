@@ -212,10 +212,20 @@
     margin-bottom: 40px;
 }
 
-.radio-field-1 ul {
-    list-style: none;
-    padding-right: 100px;
-    text-align: center;
+.text-radio ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.text-radio label {
+    width: 400%;
+}
+
+.text p {
+    margin-left: 50px;
+    font-style: italic;
+    color: gray;
 }
 
 /* tooltip container */

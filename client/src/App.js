@@ -18,6 +18,9 @@ import Blog_8 from './Pages/Blog_Posts/Blog_8'
 import Form_1 from './Pages/Serve/Application Form/Application_Form_1'
 import Form_2 from './Pages/Serve/Application Form/Application_Form_2'
 import Form_3 from './Pages/Serve/Application Form/Application_Form_3'
+import Form_4 from './Pages/Serve/Application Form/Application_Form_4'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Equipment from './Pages/Give/Equipment'
@@ -37,19 +40,21 @@ function App() {
           <Route path='/Sog' element={<Sog/>}/>
           <Route path='/Contact' element={<Contact/>}/>
           <Route path='/Equipment' element={<Equipment/>}/>
-          <Route path='/Blog_1' element={<Blog_1/>}/>
-          <Route path='/Blog_2' element={<Blog_2/>}/>
-          <Route path='/Blog_3' element={<Blog_3/>}/>
-          <Route path='/Blog_4' element={<Blog_4/>}/>
-          <Route path='/Blog_5' element={<Blog_5/>}/>
-          <Route path='/Blog_6' element={<Blog_6/>}/>
-          <Route path='/Blog_7' element={<Blog_7/>}/>
-          <Route path='/Blog_8' element={<Blog_8/>}/>
-          <Route path='/Application_Form_1' element={<Form_1/>}/>
-          <Route path='/Application_Form_2' element={<Form_2/>}/>
-          <Route path='/Application_Form_3' element={<Form_3/>}/>
+          <Route path='/Blog-1' element={<Blog_1/>}/>
+          <Route path='/Blog-2' element={<Blog_2/>}/>
+          <Route path='/Blog-3' element={<Blog_3/>}/>
+          <Route path='/Blog-4' element={<Blog_4/>}/>
+          <Route path='/Blog-5' element={<Blog_5/>}/>
+          <Route path='/Blog-6' element={<Blog_6/>}/>
+          <Route path='/Blog-7' element={<Blog_7/>}/>
+          <Route path='/Blog-8' element={<Blog_8/>}/>
+          <Route path='/Application-Form-1' element={<Form_1/>}/>
+          <Route path='/Application-Form-2' element={<Form_2/>}/>
+          <Route path='/Application-Form-3' element={<Form_3/>}/>
+          <Route path='/Application-Form-4' element={<Form_4/>}/>
         </Routes>
       </BrowserRouter>
+      <ToastContainer/>
     </div>
   );
 }

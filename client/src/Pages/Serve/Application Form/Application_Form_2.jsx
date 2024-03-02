@@ -6,7 +6,7 @@ import Footer from '../../../Components/Footer/Footer'
 
 const Application_Form_2 = () => {
 
-  //if user selects other
+  //if user selects other field
   const [selectedOption, setSelectedOption] = useState('');
   const [otherValue, setOtherValue] = useState('');
 
@@ -201,8 +201,8 @@ const Application_Form_2 = () => {
             </div>
 
             <button type='submit' className='form-btn-1'>Save</button>
-            <Link className='form-btn-3' to='/Application_Form_1'>Back</Link>
-            <Link className='form-btn-2' to='/Application_Form_3'>Next</Link>
+            <Link className='form-btn-3' to='/Application-Form-1'>Back</Link>
+            <Link className='form-btn-2' to='/Application-Form-3'>Next</Link>
 
         </div>
         <Footer/>

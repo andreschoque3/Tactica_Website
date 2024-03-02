@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
+import '../../Serve/Form.css'
 import Navbar from '../../../Components/Navbar/Navbar'
 import Footer from '../../../Components/Footer/Footer'
 
@@ -66,7 +67,9 @@ function Application_Form_3() {
                     <h2>Emergency Contact Details</h2>
 
                     <form action="">
-                        
+
+                        <div className='forms'>
+
                         <div className='field'>
                             <label htmlFor="Contact">Contact Name</label>
                             <input type="text" id='contact' name='contact' placeholder='Enter contact name' required />
@@ -117,8 +120,7 @@ function Application_Form_3() {
                             <input type="email" name='zip code' placeholder='Enter zip code' required />
                         </div>
 
-                        
-
+                        </div>
                     </form>
                 </div>
 
@@ -174,36 +176,41 @@ function Application_Form_3() {
                     </form>
                 </div>
 
-                <div className='details-block'>
+                <div className='demo-details-block'>
                     <h2>Agreement Details</h2>
 
                     <form action="">
                         <div className='forms'>
-                            <div className='radio-field-1'>
+
+                            <div className='text-radio'>
                                 <ul>
                                     <li>
-                                        <input type="radio" name="statment" id="statement" required/>
-                                        <label htmlFor="">I have completely read the <strong className="tooltip">TACTICA Statement of Beliefs.<span className="tooltiptext">The TACTICA Statements of Beliefs can be found on the About page.</span></strong></label>
+                                        <input type="radio"/>
+                                        <label>I have completely read the <strong className='tooltip'>TACTICA Statement of Beliefs<span className="tooltiptext">The TACTICA Statements of Beliefs can be found on the About page.</span></strong>.</label>
                                     </li>
                                     <li>
-                                        <input type="radio" name="agreement" id="agreement" required/>
-                                        <label htmlFor="">I agree to operate under the authority of the TACTICA doctrinal statement during my time with TACTICA Ministries.</label>
+                                        <input type="radio" name="" id="" />
+                                        <label>I agree to operate under the authority of the TACTICA doctrinal statement during my time with TACTICA Ministries.</label>
                                     </li>
                                 </ul>
                             </div>
 
                             <div className='field'>
 
-                            </div> 
-
+                            </div>
+ 
                             <div className='field'>
                                 <label htmlFor="">Signature</label>
-                                <input type="text" name="" id="" />
+                                <input type="text" name="" id="" placeholder='Type full name' />
                             </div>
 
                             <div className='field'>
                                 <label htmlFor="">Date</label>
-                                <input type="date" name="" id=""/>
+                                <input type="date" name="" id="" placeholder='mm/dd/yyyy'  max="9999-12-31"/>
+                            </div>
+
+                            <div className='field'>
+
                             </div>
 
                             <div className='text'>
@@ -214,8 +221,8 @@ function Application_Form_3() {
                 </div>
 
                 <button type='submit' className='form-btn-1'>Save</button>
-                <Link className='form-btn-3' to='/Application_Form_2'>Back</Link>
-                <Link className='form-btn-2' to='/Application_Form_4'>Next</Link>
+                <Link className='form-btn-3' to='/Application-Form-2'>Back</Link>
+                <Link className='form-btn-2' to='/Application-Form-4'>Next</Link>
 
 
             </div>

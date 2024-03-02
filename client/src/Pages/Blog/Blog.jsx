@@ -60,7 +60,7 @@ const Blog = () => {
             <h3>Daily News</h3>
             <h2>Baptist Church Honors Law Enforcement</h2>
             <p>Portage - More than 40 men and women who help make society a safer place were the focus of attention Sunday at Berean...</p>
-            <Link to="/Blog_1">Read More</Link>
+            <Link to="/Blog-1">Read More</Link>
           </div>
 
           <div className='blog' id='2'>
@@ -68,7 +68,7 @@ const Blog = () => {
             <h3>Daily News</h3>
             <h2>GOE Commanders trained in SWATT Tactics</h2>
             <p>Guano - The afternoon of this Friday, September 18, at the Special Operations Group of the Special Operations Group...</p>
-            <Link to="/Blog_2">Read More</Link>
+            <Link to="/Blog-2">Read More</Link>
           </div>
 
           <div className='blog' id='3'>
@@ -76,7 +76,7 @@ const Blog = () => {
             <h3>Daily News</h3>
             <h2>TACTICA Men's Gathering: Nov 2023</h2>
             <p>The TACTICA Ministry Center was recently the site for a men's gathering. The building was full of life and food and relationships...</p>
-            <Link to="/Blog_3">Read More</Link>
+            <Link to="/Blog-3">Read More</Link>
           </div>
 
           <div className='blog' id='4'>
@@ -84,7 +84,7 @@ const Blog = () => {
             <h3>Testimonies</h3>
             <h2>All because He COLLIDED with JESUS</h2>
             <p>TACTICA’s influence on the Costa Rican police model has been unusual. Ryan and his family arrived at a key moment for the country...</p>
-            <Link to="/Blog_4">Read More</Link>
+            <Link to="/Blog-4">Read More</Link>
           </div>
 
           <div className='blog' id='5'>
@@ -92,7 +92,7 @@ const Blog = () => {
             <h3>Testimonies</h3>
             <h2>Tactical Medincine & the Gospel for Paramedics</h2>
             <p>TACTICA Force Multiplier partners recently provided training at the university for new paramedics...</p>
-            <Link to="/Blog_5">Read More</Link>
+            <Link to="/Blog-5">Read More</Link>
           </div>
 
           <div className='blog' id='6'>
@@ -100,7 +100,7 @@ const Blog = () => {
             <h3>Ministry Work</h3>
             <h2>A Glance into the Work of the Ecuadorian Special Operations Group</h2>
             <p>TACTICA has provided tactical, medical, and leadership training on numerous occasions to the Ecuadorian GOE team...</p>
-            <Link to="/Blog_6">Read More</Link>
+            <Link to="/Blog-6">Read More</Link>
           </div>
 
           {showExtraBlogs && (
@@ -110,7 +110,7 @@ const Blog = () => {
                 <h3>Daily Prayer</h3>
                 <h2>Burdened for those Silently Suffering in the Public Safety Community</h2>
                 <p>Headlines across the country remind us that the weight, stress, and trauma of the public safety career are aspects we absolutely cannot overlook...</p>
-                <Link to="/Blog_7">Read More</Link>
+                <Link to="/Blog-7">Read More</Link>
               </div>
 
               <div className='blog' id='8'>
@@ -118,7 +118,7 @@ const Blog = () => {
                 <h3>Reflections</h3>
                 <h2>Summary of a recent conversation: Burnout is real</h2>
                 <p>Toxic but common lies- Big boys don’t cry. Real men are not emotional. If you “feel” the wrong thing, you are defective. Censor who you are....</p>
-                <Link to="/Blog_8">Read More</Link>
+                <Link to="/Blog-8">Read More</Link>
               </div>
             </>
           )}
