@@ -1,6 +1,6 @@
 import React from 'react'
 import './Footer.css'
-import logo from '../Assets/logo_tactica_global.jpeg'
+import logo from '../Assets/tactica-global-real.png'
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
@@ -17,6 +17,7 @@ const Footer = () => {
             <li><Link to="/Give" id='give-link'>Give</Link></li>
             <li><Link to="/Global" id='global-link'>Global</Link></li>
             <li><Link to="/Contact" id='contact-link'>Contact</Link></li>
+            <li><Link to="/Shop" id='shop-link'>Shop</Link></li>
           </ul>
           <i className='fas fa-bars'></i>
         </nav>
@@ -28,7 +29,7 @@ const Footer = () => {
 
 
       <div className='bottom'>
-       <p className='line1'>Copyright ©️ TACTICA Ministries, Inc. • Privacy Policy • Terms & Conditions</p>
+       <p className='line1'>Copyright &nbsp; ©️ &nbsp; TACTICA Ministries, Inc. &nbsp; • &nbsp; Privacy Policy &nbsp; • &nbsp; Terms & Conditions</p>
        <p className='line2'>Tactica Ministries, Inc. (T.A.C.T.I.C.A) is a registered 501(c)3 non-profit organization.</p>
        <p className='line3'>Donations are tax deductible in full or in part, as determined by the IRS.</p>
       </div>

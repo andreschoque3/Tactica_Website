@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Slider from 'react-slick';
 import "./Home.css"
@@ -12,10 +12,11 @@ import vid3 from "./Images/tactica-naples.mp4"
 import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick-theme.css"
 
 function Home() {
 
+  // video slider functionality
   const settings = {
     dots: true,
     infinite: true,
@@ -28,7 +29,7 @@ function Home() {
       <div style={{ textAlign: "center" }}>
       <ul style={{ margin: "0px", padding: "0px", display: "inline-block", listStyle: "none" }}> 
         {React.Children.map(dots, dot => (
-          <li style={{ display: "inline-block", margin: "0 5px"}}>{dot}</li>
+          <li style={{ display: "inline-block", margin: "0 15px" }}>{dot}</li>
         ))}
       </ul>
     </div>
@@ -111,19 +112,19 @@ function Home() {
         <div className='video-carousel'>
           <Slider {...settings}>
             <div className='frame'>
-              <video controls className='video-element'>
+              <video controls className='video-element' preload='auto'>
                 <source src={vid1} type='video/mp4' />
               </video>
             </div>
 
             <div className='frame'>
-              <video controls className='video-element'>
+              <video controls className='video-element' preload='auto'>
                 <source src={vid2} type='video/mp4' />
               </video>
             </div>
 
             <div className='frame'>
-              <video controls className='video-element'>
+              <video controls className='video-element' preload='auto'>
                 <source src={vid3} type='video/mp4' />
               </video>
             </div>

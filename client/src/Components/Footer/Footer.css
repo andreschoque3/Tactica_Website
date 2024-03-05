@@ -17,25 +17,25 @@ nav {
     display: inline-block;
     list-style: none;
     position: relative;
-    margin: 40px 45px 30px 40px;
+    margin: 30px 25px 30px 40px;
     font-size: 20px;
     cursor: pointer;
 }
 
-#home-link, #about-link, #blog-link, #serve-link, #give-link, #global-link, #contact-link {
+#home-link, #about-link, #blog-link, #serve-link, #give-link, #global-link, #contact-link, #shop-link {
     text-decoration: none;
     color: white;
 }
 
 .footer {
-    background-color: #2D3033;
+    background-color: black;
     color: white;
     padding-bottom: 20px;
     padding-top: 20px;
 }
 
 .footer-line {
-    width: 94.5%;
+    width: 96.5%;
     margin: 40px;
     height: 4px;
     background: white;

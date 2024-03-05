@@ -1,13 +1,13 @@
 import React from 'react'
 import './Navbar.css'
-import logo from '../Assets/logo_tactica_global.jpeg'
+import logo from '../Assets/tactica-global-real.png'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
 
   return (
     <div className='navbar'>
-      <div className='nav-top'>
+
         <nav className='first'>
           <img src={logo} alt="logo" className='logo-top' />
           <ul className='icon-menu'>
@@ -17,14 +17,11 @@ const Navbar = () => {
           </ul>
           <i className='fas fa-bars'></i>
         </nav>
-      </div>
 
-      <div>
-        <hr className='navbar-line' />
-      </div>
+        <div>
+         <hr className='navbar-line' />
+        </div>
 
-
-      <div className='nav-bottom'>
         <nav className='second'>
           <ul className='nav-menu'>
             <li><Link to="/" id='home-link'>Home</Link></li>
@@ -34,9 +31,10 @@ const Navbar = () => {
             <li><Link to="/Give" id='give-link'>Give</Link></li>
             <li><Link to="/Global" id='global-link'>Global</Link></li>
             <li><Link to="/Contact" id='contact-link'>Contact</Link></li>
+            <li><Link to="/Shop" id='shop-link'>Shop</Link></li>
           </ul>
         </nav>
-      </div>
+      
     </div>
   )
 }

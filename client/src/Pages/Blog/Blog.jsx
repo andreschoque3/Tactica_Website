@@ -7,8 +7,10 @@ import artPic1 from './Images/article-pic1.png'
 import artPic2 from './Images/article-pic2.png'
 import artPic3 from '../../Images/blog-article-3-2.png'
 import artPic4 from './Images/article-pic4.png'
-import artPic5 from './Images/article-pic5.png'
-import artPic6 from './Images/article-pic6.png'
+import artPic5 from '../../Images/blog-article-5-1.jpg'
+import artPic6 from '../../Images/blog-article-6.png'
+import artPic7 from '../../Images/blog-article-7-1.jpg'
+import artPic8 from '../../Images/blog-article-8.jpg'
 
 const Blog = () => {
 
@@ -36,7 +38,7 @@ const Blog = () => {
     <Navbar/>
 
     <section className='header-section-blg'>
-      <div className='text-box'>
+      <div className='text-box-blg'>
         <h1 className='title-blg'>TACTICA Testimonies</h1>
         <a className='btn-blg' onClick={handleScrollToMissStat}>Read More</a>
       </div>
@@ -106,7 +108,7 @@ const Blog = () => {
           {showExtraBlogs && (
             <>
               <div className='blog' id='7'>
-                <img src="" alt="Burdened for those Silently Suffering in the Public Safety Community" />
+                <img src={artPic7} alt="Burdened for those Silently Suffering in the Public Safety Community" />
                 <h3>Daily Prayer</h3>
                 <h2>Burdened for those Silently Suffering in the Public Safety Community</h2>
                 <p>Headlines across the country remind us that the weight, stress, and trauma of the public safety career are aspects we absolutely cannot overlook...</p>
@@ -114,7 +116,7 @@ const Blog = () => {
               </div>
 
               <div className='blog' id='8'>
-                <img src="" alt="Summary of a recent conversation Burnout is real" />
+                <img src={artPic8} alt="Summary of a recent conversation Burnout is real" />
                 <h3>Reflections</h3>
                 <h2>Summary of a recent conversation: Burnout is real</h2>
                 <p>Toxic but common lies- Big boys don’t cry. Real men are not emotional. If you “feel” the wrong thing, you are defective. Censor who you are....</p>

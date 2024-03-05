@@ -1,8 +1,11 @@
 import React, { useRef } from 'react'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./About.css"
 import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
 import founderImg from '../../Images/ryan-gretchen-rought-2023-2.jpg'
+
 
 const About = () => {
 
@@ -31,9 +34,12 @@ const About = () => {
         })
         .catch((error) => {
           console.error(`Error fetching or processing the PDF file (${pdfFileName}):`, error);
+          toast.error('Error fetching or processing the PDF file.')
+          
         });
     } catch (error) {
       console.error(`Error constructing PDF file URL (${pdfFileName}):`, error);
+      toast.error('Error constructing PDF file URL.')
     }
   };
 

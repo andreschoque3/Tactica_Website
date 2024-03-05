@@ -19,6 +19,7 @@ import Form_1 from './Pages/Serve/Application Form/Application_Form_1'
 import Form_2 from './Pages/Serve/Application Form/Application_Form_2'
 import Form_3 from './Pages/Serve/Application Form/Application_Form_3'
 import Form_4 from './Pages/Serve/Application Form/Application_Form_4'
+import Shop from './Pages/Shop/Shop'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
@@ -52,6 +53,7 @@ function App() {
           <Route path='/Application-Form-2' element={<Form_2/>}/>
           <Route path='/Application-Form-3' element={<Form_3/>}/>
           <Route path='/Application-Form-4' element={<Form_4/>}/>
+          <Route path='/Shop' element={<Shop/>}/>
         </Routes>
       </BrowserRouter>
       <ToastContainer/>

@@ -1,0 +1,38 @@
+.header-sh {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(./shop.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.text-box h1 {
+    font-size: 55px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    padding-top: 14%;
+}
+
+.shop-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 500px;
+    padding: 20px 45px;
+    font-size: 20px;
+    top: 45%;
+    left: 40.5%;
+    background: transparent;
+    position: absolute;
+    cursor: pointer;
+}
+
+.shop-btn:hover {
+    border: 1px solid red;
+    background: red;
+    transition: 1s;
+}
