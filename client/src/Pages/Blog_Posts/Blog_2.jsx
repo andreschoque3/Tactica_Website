@@ -1,11 +1,17 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import './Blog_post.css'
 import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
-import BlogPic2 from '../../Images/blog-article-2.png'
+import BlogPic2 from './Images/blog-article-2.png'
 
 const Blog_2 = () => {
+
+  // browser tab title
+  useEffect(() => {
+    document.title = 'Blog: GOE Commanders trained in SWATT Tactics';
+  }, []);
+
   return (
     <div className='blog-post-2'>
         

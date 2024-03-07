@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 import './Give.css'
 import { Link } from 'react-router-dom'
 import Navbar from '../../Components/Navbar/Navbar'
@@ -10,6 +10,11 @@ import donImg4 from './Images/donation-pic4.jpg'
 import donImg5 from './Images/donation-pic5.jpg'
 
 const Give = () => {
+
+  // browser tab title
+  useEffect(() => {
+    document.title = 'Giving Options';
+  }, []);
 
   // Links to donate
   const handleTacticaMinistriesBtn = () => {

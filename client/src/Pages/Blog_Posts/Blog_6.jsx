@@ -1,9 +1,9 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import './Blog_post.css'
 import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
-import BlogPic6 from '../../Images/blog-article-6.png'
+import BlogPic6 from './Images/blog-article-6.png'
 
 function Blog_6() {
 
@@ -13,6 +13,11 @@ function Blog_6() {
 
     window.open(facebookUrl, '_blank')
   }
+
+  // browser tab title
+  useEffect(() => {
+    document.title = 'Blog: A Glance into the Work of the Ecuadorian Special Operations Group';
+  }, []);
 
   return (
     <div className='blog-article-6'>

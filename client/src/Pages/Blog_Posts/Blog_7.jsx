@@ -1,18 +1,23 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import './Blog_post.css'
 import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
-import BlogPic7 from '../../Images/blog-article-7.jpg'
+import BlogPic7 from './Images/blog-article-7.jpg'
 
 function Blog_7() {
 
   // click functionality for link
   const handleLink = () => {
-    const paypalUrl = 'https://abc7.com/la-county-sheriffs-department-lasd-deputies-suicide/14024417/?fbclid=IwAR0pEjDytV_LdhX-BMW6O3LI1QglStTduriJC3EI8GXUuc7FEWpLF_2-dQY#loqhz5rie444tsuwdz'
+    const abcUrl = 'https://abc7.com/la-county-sheriffs-department-lasd-deputies-suicide/14024417/?fbclid=IwAR0pEjDytV_LdhX-BMW6O3LI1QglStTduriJC3EI8GXUuc7FEWpLF_2-dQY#loqhz5rie444tsuwdz'
 
-    window.open(paypalUrl, '_blank')
+    window.open(abcUrl, '_blank')
   }
+
+  // browser tab title
+  useEffect(() => {
+    document.title = 'Blog: Burdened for those Silently Suffering in the Public Safety Community';
+  }, []);
 
   return (
     <div className='blog-article-7'>

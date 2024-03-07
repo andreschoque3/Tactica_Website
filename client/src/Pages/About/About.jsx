@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./About.css"
@@ -8,6 +8,11 @@ import founderImg from '../../Images/ryan-gretchen-rought-2023-2.jpg'
 
 
 const About = () => {
+
+  // browser tab title
+  useEffect(() => {
+    document.title = 'About Us';
+  }, []);
 
   // PDF download functionality
   const handleDownloadPDF = (pdfFileName, fileName) => {

@@ -230,7 +230,7 @@ const Application_Form_1 = () => {
               </div>
               
               <button type='submit' className='form-btn-1'>Save</button>
-              <Link className='form-btn-2' to='/Application-Form-2'>Next</Link>
+              <Link className='form-btn-2' to='/Application-Form-page-2'>Next</Link>
 
           </div>
         <Footer/>

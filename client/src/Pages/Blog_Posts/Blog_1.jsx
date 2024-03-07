@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import './Blog_post.css'
 import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
-import BlogPic1 from '../../Images/blog-article-1.png'
+import BlogPic1 from './Images/blog-article-1.png'
 
 const Blog_1 = () => {
+
+  // browser tab title
+  useEffect(() => {
+    document.title = 'Blog: Baptist Church Honors Law Enforcement';
+  }, []);
+
   return (
     <div className='blog-post-1'>
 

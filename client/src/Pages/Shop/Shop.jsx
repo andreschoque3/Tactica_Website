@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './Shop.css'
 import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
@@ -11,6 +11,11 @@ const Shop = () => {
 
         window.open(proformaURL, '_blank')
     }
+
+    // browser tab title
+  useEffect(() => {
+    document.title = 'TACTICA Shop';
+  }, []);
 
 
   return (

@@ -1,12 +1,18 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import './Blog_post.css'
 import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
-import BlogPic3_1 from '../../Images/blog-article-3-1.png'
-import BlogPic3_2 from '../../Images/blog-article-3-2.png'
+import BlogPic3_1 from './Images/blog-article-3-1.png'
+import BlogPic3_2 from './Images/blog-article-3-2.png'
 
 const Blog_3 = () => {
+
+  // browser tab title
+  useEffect(() => {
+    document.title = "Blog: TACTICA Men's Gathering: Nov 2023";
+  }, []);
+
   return (
     <div className='Blog-post-3'>
         <Navbar/>

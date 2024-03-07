@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './Global.css'
 import Navbar from '../../Components/Navbar/Navbar'
@@ -20,6 +20,11 @@ const Global = () => {
   const togglePopup = (content) => {
     setPopupContent(content);
   };
+
+  // browser tab title
+  useEffect(() => {
+    document.title = 'Global Components';
+  }, []);
 
 
   return (

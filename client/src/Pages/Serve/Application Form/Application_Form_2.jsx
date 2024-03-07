@@ -201,8 +201,8 @@ const Application_Form_2 = () => {
             </div>
 
             <button type='submit' className='form-btn-1'>Save</button>
-            <Link className='form-btn-3' to='/Application-Form-1'>Back</Link>
-            <Link className='form-btn-2' to='/Application-Form-3'>Next</Link>
+            <Link className='form-btn-3' to='/Application-Form-page-1'>Back</Link>
+            <Link className='form-btn-2' to='/Application-Form-page-3'>Next</Link>
 
         </div>
         <Footer/>

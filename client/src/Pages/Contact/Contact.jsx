@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import './Contact.css'
@@ -6,6 +6,11 @@ import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
 
 const Contact = () => {
+
+  // browser tab title
+  useEffect(() => {
+    document.title = 'Contact Us';
+  }, []);
 
   const onSubmit = async (event) => {
     event.preventDefault();

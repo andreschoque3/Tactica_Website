@@ -1,12 +1,18 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import './Blog_post.css'
 import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
-import BlogPic5_1 from '../../Images/blog-article-5-1.jpg'
-import BlogPic5_2 from '../../Images/blog-article-5-2.jpg'
+import BlogPic5_1 from './Images/blog-article-5-1.jpg'
+import BlogPic5_2 from './Images/blog-article-5-2.jpg'
 
 const Blog_5 = () => {
+
+  // browser tab title
+  useEffect(() => {
+    document.title = 'Blog: Tactical Medicine & the Gospel for Paramedics';
+  }, []);
+
   return (
     <div className='blog-article-5'>
 

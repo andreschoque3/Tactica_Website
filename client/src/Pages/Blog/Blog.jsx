@@ -1,18 +1,23 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './Blog.css'
 import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
 import artPic1 from './Images/article-pic1.png'
 import artPic2 from './Images/article-pic2.png'
-import artPic3 from '../../Images/blog-article-3-2.png'
+import artPic3 from './Images/article-pic3.png'
 import artPic4 from './Images/article-pic4.png'
-import artPic5 from '../../Images/blog-article-5-1.jpg'
-import artPic6 from '../../Images/blog-article-6.png'
-import artPic7 from '../../Images/blog-article-7-1.jpg'
-import artPic8 from '../../Images/blog-article-8.jpg'
+import artPic5 from './Images/article-pic5.jpg'
+import artPic6 from './Images/article-pic6.png'
+import artPic7 from './Images/article-pic7.jpg'
+import artPic8 from './Images/article-pic8.jpg'
 
 const Blog = () => {
+
+  // browser tab title
+  useEffect(() => {
+    document.title = 'Blog Posts';
+  }, []);
 
   // Scroll effect
   const missStatRef = useRef(null);
@@ -110,7 +115,7 @@ const Blog = () => {
               <div className='blog' id='7'>
                 <img src={artPic7} alt="Burdened for those Silently Suffering in the Public Safety Community" />
                 <h3>Daily Prayer</h3>
-                <h2>Burdened for those Silently Suffering in the Public Safety Community</h2>
+                <h2>Burdened for those Silently Suffering...</h2>
                 <p>Headlines across the country remind us that the weight, stress, and trauma of the public safety career are aspects we absolutely cannot overlook...</p>
                 <Link to="/Blog-7">Read More</Link>
               </div>
@@ -118,7 +123,7 @@ const Blog = () => {
               <div className='blog' id='8'>
                 <img src={artPic8} alt="Summary of a recent conversation Burnout is real" />
                 <h3>Reflections</h3>
-                <h2>Summary of a recent conversation: Burnout is real</h2>
+                <h2>Summary of a recent conversation: Burnout...</h2>
                 <p>Toxic but common lies- Big boys don’t cry. Real men are not emotional. If you “feel” the wrong thing, you are defective. Censor who you are....</p>
                 <Link to="/Blog-8">Read More</Link>
               </div>

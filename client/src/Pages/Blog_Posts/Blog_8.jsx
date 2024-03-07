@@ -1,11 +1,17 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import './Blog_post.css'
 import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
-import BlogPic8 from '../../Images/blog-article-8.jpg'
+import BlogPic8 from './Images/blog-article-8.jpg'
 
 const Blog_8 = () => {
+
+  // browser tab title
+  useEffect(() => {
+    document.title = 'Blog: Summary of a recent Conversation: Burnout is real';
+  }, []);
+
   return (
     <div className='blog-article-8'>
       
