@@ -81,7 +81,7 @@
   cursor: pointer;
   position: relative;
   border-color: black;
-  border-width: 8px;
+  border-width: 5px;
   border-style: solid;
 }
 
@@ -100,4 +100,22 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+
+.description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 21px;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+  transition: opacity 0.5s ease;
+}
+
+.item:hover .description {
+  display: block;
+  opacity: 1;
+}
 

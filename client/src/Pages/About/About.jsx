@@ -121,8 +121,8 @@ const About = () => {
 
     <section className='bel-cel'>
       <h1 className='bel-cel-h1'>What We Believe & Celebrate</h1>
-      <a className='btn-ab2' onClick={() => handleDownloadPDF('TACTICA Celebrate English.pdf', 'TACTICA Celebrate English.pdf')}>Believe</a>
-      <a className='btn-ab3'onClick={() => handleDownloadPDF('TACTICA Statement of Beliefs English.pdf', 'TACTICA Statement of Beliefs English.pdf')}>Celebrate</a>
+      <a className='btn-ab2' onClick={() => handleDownloadPDF('TACTICA Celebrate English.pdf', 'TACTICA Celebrate English.pdf')}>Believe <i className='fas fa-file-arrow-down'></i></a>
+      <a className='btn-ab3'onClick={() => handleDownloadPDF('TACTICA Statement of Beliefs English.pdf', 'TACTICA Statement of Beliefs English.pdf')}>Celebrate <i className='fas fa-file-arrow-down'></i></a>
     </section>
 
     <Footer/>

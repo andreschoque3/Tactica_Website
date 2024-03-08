@@ -1,3 +1,5 @@
+/**** Application form page 1 ****/
+
 .form-container h1 {
     text-align: center;
     font-size: 46px;
@@ -15,13 +17,6 @@
     margin-bottom: 40px;
 }
 
-.demo-details-block h2 {
-    padding-left: 50px;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    font-size: 30px;
-}
-
 .details-block h2 {
     padding-left: 50px;
     padding-bottom: 20px;
@@ -35,55 +30,6 @@
     justify-content: space-between;
     
 }
-
-.field select {
-    width: 80%;
-    height: 52%;
-    padding: 14px;
-    background: lightgray;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 15px;
-    font-size: 20px;
-  }
-
-.specific-field select {
-    width: 80%;
-    height: 65%;
-    padding: 14px;
-    background: lightgray;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 15px;
-    font-size: 20px;
-}
-
-.specific-field {
-    display: flex;
-    width: calc(33.33% - 10px);
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.specific-field label {
-    align-self: flex-start;
-    padding-left: 50px;
-    font-weight: bold;
-}
-
-.sub-field{
-    display: flex;
-    width: calc(102% - 10px);
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
 
 .field {
     display: flex;
@@ -100,6 +46,18 @@
     padding-left: 50px;
     font-weight: bold;
 }
+
+.field select {
+    width: 80%;
+    height: 52%;
+    padding: 14px;
+    background: lightgray;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 15px;
+    font-size: 20px;
+  }
 
 .radio-label {
     font-weight: bold;
@@ -146,6 +104,45 @@
     margin-top: 30px;
 }
 
+/**** Application form page 2 ****/
+
+.specific-field select {
+    width: 80%;
+    height: 65%;
+    padding: 14px;
+    background: lightgray;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.specific-field {
+    display: flex;
+    width: calc(33.33% - 10px);
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.specific-field label {
+    align-self: flex-start;
+    padding-left: 50px;
+    font-weight: bold;
+}
+
+.sub-field{
+    display: flex;
+    width: calc(102% - 10px);
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
 .form-btn-3 {
     display: inline-block;
     text-decoration: none;
@@ -169,14 +166,26 @@
     color: #fff;
 }
 
-.paragraph textarea {
-    width: 100%;
+.sub-fields {
     margin-left: 50px;
+}
 
+.sub-fields label {
+    padding-left: 3px;
+}
+
+.sub-fields select {
+    margin-bottom: 40px;
+}
+
+/**** Application form page 3 ****/
+
+.paragraph textarea {
+    margin-left: 50px;
+    width: 100%;
 }
 
 .paragraph label {
-    align-self: flex-start;
     padding-left: 50px;
     font-weight: bold;
 }
@@ -200,18 +209,6 @@
     margin-bottom: 40px;
 }
 
-.sub-fields {
-    margin-left: 50px;
-}
-
-.sub-fields label {
-    padding-left: 3px;
-}
-
-.sub-fields select {
-    margin-bottom: 40px;
-}
-
 .text-radio ul li {
     display: flex;
     align-items: center;
@@ -219,7 +216,7 @@
 }
 
 .text-radio label {
-    width: 400%;
+    width: 200%;
 }
 
 .text p {
@@ -258,5 +255,20 @@
   .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+  }
+
+  /**** Application form page 4 ****/
+
+  .text-radio p {
+    margin-left: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .details-block p {
+    width: 95%;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    font-style: italic;
   }
 

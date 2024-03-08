@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import './Sog.css'
 import Navbar from '../../Components/Navbar/Navbar'
@@ -6,6 +6,12 @@ import Footer from '../../Components/Footer/Footer'
 import soglogo from './Images/logo_tactica_sog.jpg'
 
 const Sog = () => {
+
+  // browser tab title
+  useEffect(() => {
+    document.title = 'TACTICA SOG';
+  }, []);
+
   return (
     <div className='sog'>
 

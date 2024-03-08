@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import './Equipment.css'
 import Navbar from '../../Components/Navbar/Navbar'
@@ -9,6 +9,11 @@ import item3 from './Images/item-3.png'
 import item4 from './Images/item-4.jpeg'
 
 const Equipment = () => {
+
+  // browser tab title
+  useEffect(() => {
+    document.title = 'Equipment';
+  }, []);
 
     return (
     <div>
@@ -39,19 +44,22 @@ const Equipment = () => {
           
           <div className='item'>
             <img src={item1} alt="item1" />
-
+            <p className='description'>Tactical supplies</p>
           </div>
 
           <div className='item'>
             <img src={item2} alt="item2" />
+            <p className='description'>Holsters & Pouches</p>
           </div>
 
           <div className='item'>
             <img src={item3} alt="item3" />
+            <p className='description'>Medical supplies</p>
           </div>
 
           <div className='item'>
             <img src={item4} alt="item4" />
+            <p className='description'>Bibles & Journals</p>
           </div>
 
         </div>
