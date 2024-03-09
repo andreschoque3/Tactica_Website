@@ -12,7 +12,7 @@ const Equipment = () => {
 
   // browser tab title
   useEffect(() => {
-    document.title = 'Equipment';
+    document.title = 'TACTICA Equipment';
   }, []);
 
     return (

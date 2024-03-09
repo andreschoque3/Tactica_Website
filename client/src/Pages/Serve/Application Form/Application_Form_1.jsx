@@ -175,7 +175,7 @@ const Application_Form_1 = () => {
 
                         <div className='field'>
                             <label>Height</label>
-                            <input type="text" placeholder='Enter height'/>
+                            <input type="text" placeholder='Enter height' required/>
                         </div>
 
                         <div className='field'>
