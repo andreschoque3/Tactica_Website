@@ -1,0 +1,105 @@
+.parent-wrapper {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parent-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(./Images/login.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.login-page body {
+    background-color: red;
+}
+
+.wrapper {
+    width: 420px;
+    background: transparent;
+    color: white;
+    border-radius: 10px;
+    padding: 30px 40px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box {
+    position: relative;
+    margin: 30px;
+}
+
+.input-box input {
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    color: white;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: white;
+}
+
+.input-box .fa-user, .input-box .fa-eye-slash, .input-box .fa-eye {
+    position: absolute;
+    left: 85%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.wrapper .remember-forget {
+    display: flex;
+    justify-content: space-around;
+    margin: -15px 0 15px;
+}
+
+.click-here {
+    color: blue;
+    text-decoration: none;
+}
+
+.click-here:hover {
+    text-decoration: underline;
+}
+
+.wrapper button {
+    width: 100%;
+    height: 45px;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+
+.wrapper .register-link {
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a {
+    color: Blue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}

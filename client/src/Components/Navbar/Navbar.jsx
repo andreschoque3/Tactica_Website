@@ -9,7 +9,7 @@ const Navbar = () => {
 
   // Redirect the user to the login page
   const handleUserIconClick = () => {
-    window.location.href = '/login';
+    window.location.href = '/Login';
   };
 
   // Language selection
