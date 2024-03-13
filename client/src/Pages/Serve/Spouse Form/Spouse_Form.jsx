@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import 'react-toastify/dist/ReactToastify.css';
 import '../../Serve/Form.css'
 import Navbar from '../../../Components/Navbar/Navbar';
 import Footer from '../../../Components/Footer/Footer';
+import { toast } from 'react-toastify';
 
 function Spouse_Form() {
 
@@ -32,6 +34,36 @@ function Spouse_Form() {
     }
   };
 
+  // POST request to google sheet
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwspzw4WYSmJdAWbWbenI436Qj08juBok6jdmkXwWNgpRJgJrFFQ6sMoXw7IH9B2K5H/exec';
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+
+    try {
+      const response = await fetch(scriptURL, {
+        method: 'POST',
+        body: formData
+      });
+
+      if (response.ok) {
+        toast.success('Form submitted successfully')
+        e.target.reset();
+        setGodsLeadership('');
+        setSpouseRole('');
+        setSpouseSpiritualGifts('')
+        setAdditionalInfo('')
+      } else {
+        toast.error('Form submission failed')
+        throw new Error('Failed to submit message');
+      }
+    } catch (error) {
+      console.error('Error!', error.message);
+      toast.error('Error', error.message);
+    }
+  };
+
   return (
     <div>
       <Navbar/>
@@ -39,7 +71,7 @@ function Spouse_Form() {
             <h1>Applicant's Spouse Form</h1>
             <hr  style={{width: '36%'}}/>
 
-            <form action="sp">
+            <form action="" onSubmit={handleSubmit}>
 
               <div className='details-block'>
                 <h2>Personal Details</h2>
@@ -48,27 +80,27 @@ function Spouse_Form() {
 
                     <div className='field'>
                         <label htmlFor="">Full Name</label>
-                        <input type="text" name="" id="" placeholder='Enter full name' required />
+                        <input type="text" name="Spouse-full-name" id="" placeholder='Enter full name' required />
                     </div>
 
                     <div className='field'>
                         <label htmlFor="">Spouse Applying for TACTICA</label>
-                        <input type="text" name="" id="" placeholder='Enter spouse applying' required />
+                        <input type="text" name="Spouse-applying" id="" placeholder='Enter spouse applying' required />
                     </div>
 
                     <div className='field'>
                         <label htmlFor="">Date</label>
-                        <input type="date" name="" id="" placeholder='mm/dd/yyyy' required />
+                        <input type="date" name="Spouse-date-entry" id="" placeholder='mm/dd/yyyy' required />
                     </div>
 
                     <div className='field'>
                         <label htmlFor="">Phone Number</label>
-                        <input type="tel" name="" id="" placeholder='ex: 999-999-9999' onInput={handlePhoneInput} required />
+                        <input type="tel" name="Spouse-phone" id="" placeholder='ex: 999-999-9999' onInput={handlePhoneInput} required />
                     </div>
                     
                     <div className='field'>
                         <label htmlFor="">Email</label>
-                        <input type="email" name="" id="" placeholder='Enter email' required />
+                        <input type="email" name="Spouse-email" id="" placeholder='Enter email' required />
                     </div>
 
                     <div className='field'>
@@ -85,17 +117,17 @@ function Spouse_Form() {
                     
                     <div className='paragraph'>
                       <label htmlFor="">Describe God's leading of your spouse to this short-term mission's opportunity with TACTICA.</label>
-                      <textarea name="" id="" cols="45" rows="5" value={godsleadership} onChange={(e) => handleTextareaChange(e, setGodsLeadership)} placeholder='Maximum of 300 words' required></textarea>
+                      <textarea name="Gods-leadership-missions" id="" cols="45" rows="5" value={godsleadership} onChange={(e) => handleTextareaChange(e, setGodsLeadership)} placeholder='Maximum of 300 words' required></textarea>
                     </div>
 
                     <div className='paragraph'>
                       <label htmlFor="">Describe your understanding of your spouse's role on the team.</label>
-                      <textarea name="" id="" cols="67" rows="5" value={spouserole} onChange={(e) => handleTextareaChange(e, setSpouseRole)} placeholder='Maximum of 300 words' required></textarea>
+                      <textarea name="Spouse-team-role" id="" cols="67" rows="5" value={spouserole} onChange={(e) => handleTextareaChange(e, setSpouseRole)} placeholder='Maximum of 300 words' required></textarea>
                     </div>
 
                     <div className='paragraph'>
                       <label htmlFor="">What do you believe are your spouse's dominant spiritual gifts?</label>
-                      <textarea name="" id="" cols="67" rows="5" value={spousespiritualgifts} onChange={(e) => handleTextareaChange(e, setSpouseSpiritualGifts)} placeholder='Maximum of 300 words' required></textarea>
+                      <textarea name="Spouse-spiritual-gifts" id="" cols="67" rows="5" value={spousespiritualgifts} onChange={(e) => handleTextareaChange(e, setSpouseSpiritualGifts)} placeholder='Maximum of 300 words' required></textarea>
                     </div>
 
                     <div className='text-radio'>
@@ -131,7 +163,7 @@ function Spouse_Form() {
 
                     <div className='paragraph'>
                         <label htmlFor="">Is there any other information you would like to share with us?</label>
-                        <textarea name="" id="" cols="68" rows="5" value={additionalinfo} onChange={(e) => handleTextareaChange(e, setAdditionalInfo)} placeholder='Maximum of 300 words' required></textarea>
+                        <textarea name="Additional-info" id="" cols="68" rows="5" value={additionalinfo} onChange={(e) => handleTextareaChange(e, setAdditionalInfo)} placeholder='Maximum of 300 words' required></textarea>
                     </div>
                 </div>
               </div>

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import 'react-toastify/dist/ReactToastify.css';
 import '../../Serve/Form.css'
 import Navbar from '../../../Components/Navbar/Navbar'
 import Footer from '../../../Components/Footer/Footer'
+import { toast } from 'react-toastify';
 
 const Application_Form_4 = () => {
 
@@ -27,6 +29,37 @@ const Application_Form_4 = () => {
     }
   };
 
+  // POST request to google sheet
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwspzw4WYSmJdAWbWbenI436Qj08juBok6jdmkXwWNgpRJgJrFFQ6sMoXw7IH9B2K5H/exec';
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+
+    try {
+      const response = await fetch(scriptURL, {
+        method: 'POST',
+        body: formData
+      });
+
+      if (response.ok) {
+        toast.success('Form submitted successfully')
+        e.target.reset();
+        setTestimony('');
+        setHolySpirit('');
+        setSpirtualWorks('');
+        setMotivation('');
+        setGifts('');
+      } else {
+        toast.error('Form submission failed')
+        throw new Error('Failed to submit message');
+      }
+    } catch (error) {
+      console.error('Error!', error.message);
+      toast.error('Error', error.message);
+    }
+  };
+
   return (
     <div>
       <Navbar/>
@@ -34,7 +67,7 @@ const Application_Form_4 = () => {
               <h1>Application Form</h1>
               <hr />
 
-              <form action="4">
+              <form action="" onSubmit={handleSubmit}>
 
               <div className='details-block'>
                 <h2>Faith Details</h2>
@@ -43,46 +76,46 @@ const Application_Form_4 = () => {
 
                       <div className='paragraph'>
                           <label htmlFor="">Describe your testimony of salvation.</label>
-                          <textarea name="" id="" cols="80" rows="5" value={testimony} onChange={(e) => handleTextareaChange(e, setTestimony)} placeholder='Maximum of 300 words' required></textarea>
+                          <textarea name="Testimony" id="" cols="80" rows="5" value={testimony} onChange={(e) => handleTextareaChange(e, setTestimony)} placeholder='Maximum of 300 words' required></textarea>
                       </div>
 
                       <div className='paragraph'>
                           <label htmlFor="">Describe your understanding of the work of the Holy Spirit.</label>
-                          <textarea name="" id="" cols="65" rows="5" value={holyspirit} onChange={(e) => handleTextareaChange(e, setHolySpirit)} placeholder='Maximum of 300 words' required></textarea>
+                          <textarea name="Understanding-of-Holy-Spirit" id="" cols="65" rows="5" value={holyspirit} onChange={(e) => handleTextareaChange(e, setHolySpirit)} placeholder='Maximum of 300 words' required></textarea>
                       </div>
 
                       <div className='paragraph'>
                           <label htmlFor="">Describe your current spiritual disciplines, strengths, and weaknesses (not your goal).</label>
-                          <textarea name="" id="" cols="45" rows="5" value={spiritualworks} onChange={(e) => handleTextareaChange(e, setSpirtualWorks)} placeholder='Maximum of 300 words' required></textarea>
+                          <textarea name="Spiritual-disciplines" id="" cols="45" rows="5" value={spiritualworks} onChange={(e) => handleTextareaChange(e, setSpirtualWorks)} placeholder='Maximum of 300 words' required></textarea>
                       </div>
 
                       <div className='paragraph'>
                           <label htmlFor="">Describe what is motivating you to apply for this mission trip?</label>
-                          <textarea name="" id="" cols="63" rows="5" value={motivation} onChange={(e) => handleTextareaChange(e, setMotivation)} placeholder='Maximum of 300 words' required></textarea>
+                          <textarea name="Motivations" id="" cols="63" rows="5" value={motivation} onChange={(e) => handleTextareaChange(e, setMotivation)} placeholder='Maximum of 300 words' required></textarea>
                       </div>
 
                       <div className='paragraph'>
                           <label htmlFor="">What do you believe are your 2-3 most dominant spiritual gifts?</label>
-                          <textarea name="" id="" cols="63" rows="5" value={gifts} onChange={(e) => handleTextareaChange(e, setGifts)} placeholder='Maximum of 300 words' required></textarea>
+                          <textarea name="Spiritual-gifts" id="" cols="63" rows="5" value={gifts} onChange={(e) => handleTextareaChange(e, setGifts)} placeholder='Maximum of 300 words' required></textarea>
                       </div>
 
                       <div className='text-radio'>
                         <p>Please select which of the following most describe you:</p>
                         <ul>
                             <li>
-                              <input type="checkbox" name="" id="" />
+                              <input type="checkbox" name="Description" id="" />
                               <label>I enjoy public speaking, I love getting things done, I don't mind taking charge, and other would say that I am driven.</label>
                             </li>
                             <li>
-                              <input type="checkbox" name="" id="" />
+                              <input type="checkbox" name="Description" id="" />
                               <label>Others seem to think I am entertaining. I like to cheer others up, I tend to think positively, and I prefer to be active.</label>
                             </li>
                             <li>
-                              <input type="checkbox" name="" id="" />
+                              <input type="checkbox" name="Description" id="" />
                               <label>I prefer to serve quietly behind the scenes. Others would say that I am sensitive to people's needs and that I am a good listener. I don't mind not getting the credit.</label>
                             </li>
                             <li>
-                              <input type="checkbox" name="" id="" />
+                              <input type="checkbox" name="Description" id="" />
                               <label>I enjoy organizing and administrative tasks; I thrive in order. I want things to be completed well and on time.</label>
                             </li>
                         </ul>
@@ -107,12 +140,12 @@ const Application_Form_4 = () => {
 
                     <div className='field'>
                       <label htmlFor="">Signature</label>
-                      <input type="text" name="" id="" placeholder='Enter full name' required />
+                      <input type="text" name="Release-of-liability-signature" id="" placeholder='Enter full name' required />
                     </div>
 
                     <div className='field'>
                       <label htmlFor="">Date</label>
-                      <input type="date" name="" id="" placeholder='mm/dd/yyyy' required />
+                      <input type="date" name="Release-of-liability-date" id="" placeholder='mm/dd/yyyy' required />
                     </div>
 
                     <div className='field'>
@@ -137,12 +170,12 @@ const Application_Form_4 = () => {
 
                       <div className='field'>
                           <label htmlFor="">Signature</label>
-                          <input type="text" id='' placeholder='Enter full name' required />
+                          <input type="text" name='Team-leadership-signature' id='' placeholder='Enter full name' required />
                       </div>
 
                       <div className='field'>
                           <label htmlFor="">Date</label>
-                          <input type="date" name="" id="" placeholder='mm/dd/yyyy' required />
+                          <input type="date" name="Team-leadership-date" id="" placeholder='mm/dd/yyyy' required />
                       </div>
 
                       <div className='field'>
@@ -169,12 +202,12 @@ const Application_Form_4 = () => {
 
                     <div className='field'>
                       <label htmlFor="">Signature</label>
-                      <input type="text" name="" id="" placeholder='Enter full name' required />
+                      <input type="text" name="Medical-treatment-signature" id="" placeholder='Enter full name' required />
                     </div>
 
                     <div className='field'>
                       <label htmlFor="">Date</label>
-                      <input type="date" name="" id="" placeholder='mm/dd/yyyy' required />
+                      <input type="date" name="Medical-treatment-date" id="" placeholder='mm/dd/yyyy' required />
                     </div>
 
                     <div className='field'>

@@ -192,7 +192,7 @@
 
 .field p {
     position: absolute;
-    padding-left: 15%;
+    padding-left: 47%;
     font-style: italic;
     color: gray;
 }
@@ -201,12 +201,6 @@
     position: absolute;
     margin-right: 30%;
     cursor: pointer;
-}
-
-.fa-minus {
-    position: absolute;
-    margin-left: 10px;
-    margin-bottom: 40px;
 }
 
 .text-radio ul li {

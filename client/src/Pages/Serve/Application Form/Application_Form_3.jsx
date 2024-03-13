@@ -1,8 +1,10 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
+import 'react-toastify/dist/ReactToastify.css';
 import '../../Serve/Form.css'
 import Navbar from '../../../Components/Navbar/Navbar'
 import Footer from '../../../Components/Footer/Footer'
+import { toast } from 'react-toastify';
 
 function Application_Form_3() {
 
@@ -59,7 +61,34 @@ function Application_Form_3() {
     setLanguages(newLanguages);
   };
 
-  
+  // POST request to google sheet
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwspzw4WYSmJdAWbWbenI436Qj08juBok6jdmkXwWNgpRJgJrFFQ6sMoXw7IH9B2K5H/exec';
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+
+    try {
+      const response = await fetch(scriptURL, {
+        method: 'POST',
+        body: formData
+      });
+
+      if (response.ok) {
+        toast.success('Form submitted successfully')
+        e.target.reset();
+        setMissionTrip('');
+        setLivingAbroad('');
+        setLanguages([{ id: 1, language: '', proficiency: '' }]);
+      } else {
+        toast.error('Form submission failed')
+        throw new Error('Failed to submit message');
+      }
+    } catch (error) {
+      console.error('Error!', error.message);
+      toast.error('Error', error.message);
+    }
+  };
 
   return (
     <div>
@@ -68,7 +97,7 @@ function Application_Form_3() {
             <h1>Application Form</h1>
             <hr />
 
-            <form action="3">
+            <form action="" onSubmit={handleSubmit}>
 
              <div className='details-block'>
                <h2>Emergency Contact Details</h2>
@@ -77,52 +106,52 @@ function Application_Form_3() {
 
                     <div className='field'>
                         <label htmlFor="Contact">Contact Name</label>
-                        <input type="text" id='contact' name='contact' placeholder='Enter contact name' required />
+                        <input type="text" id='contact' name='Emergency-contact' placeholder='Enter contact name' required />
                     </div>
 
                     <div className='field'>
                         <label htmlFor="relationship">Relationship to you</label>
-                        <input type="text" id='relationship' name='relationship' placeholder='Enter relationship' required />
+                        <input type="text" id='relationship' name='Emergency-relationship' placeholder='Enter relationship' required />
                     </div>
 
                     <div className='field'>
                         <label htmlFor="phone">Phone Number</label>
-                        <input type="tel" id='phone' name='phone' onInput={handlePhoneInput} placeholder='Enter phone number' required />
+                        <input type="tel" id='phone' name='Emergency-phone' onInput={handlePhoneInput} placeholder='Enter phone number' required />
                     </div>
 
                     <div className='field'>
                         <label htmlFor="email">Email</label>
-                        <input type="email" id='email' name='email' placeholder='Enter email' required />
+                        <input type="email" id='email' name='Emergency-email' placeholder='Enter email' required />
                     </div>
 
                     <div className='field'>
                         <label htmlFor="street address">Street Address</label>
-                        <input type="text" id='street address' name='street address' placeholder='Enter street address' required />
+                        <input type="text" id='street address' name='Emergency-street-address' placeholder='Enter street address' required />
                     </div>
 
                     <div className='field'>
                         <label htmlFor="">Street Address Line 2</label>
-                        <input type="text" name='street address' placeholder='Enter street address' />
+                        <input type="text" name='Emergency-street-address-2' placeholder='Enter street address' />
                     </div>
                             
                     <div className='field'>
                         <label htmlFor="">City</label>
-                        <input type="text" name='city' placeholder='Enter city' required />
+                        <input type="text" name='Emergency-city-address' placeholder='Enter city' required />
                     </div>
 
                     <div className='field'>
                         <label htmlFor="">Country</label>
-                        <input type="text" name='country' placeholder='Enter country' required />
+                        <input type="text" name='Emergency-country-address' placeholder='Enter country' required />
                     </div>
 
                     <div className='field'>
                         <label htmlFor="">State</label>
-                        <input type="text" name='state' placeholder='Enter state' required />
+                        <input type="text" name='Emergency-state-address' placeholder='Enter state' required />
                     </div>
 
                     <div className='field'>
                         <label htmlFor="">Zip Code</label>
-                        <input type="text" name='zip code' placeholder='Enter zip code' required />
+                        <input type="text" name='Emergency-zip-code-address' placeholder='Enter zip code' required />
                     </div>
 
                </div>
@@ -142,26 +171,26 @@ function Application_Form_3() {
 
                     <div className='paragraph'>
                         <label>Have you ever served on an overseas mission trip before? If yes, briefly explain.</label>
-                        <textarea name="" id="" cols="50" rows="5" value={missionTrip} onChange={(e) => handleTextareaChange(e, setMissionTrip)} placeholder='Maximum of 300 words' required></textarea>
+                        <textarea name="Mission-trip" id="" cols="50" rows="5" value={missionTrip} onChange={(e) => handleTextareaChange(e, setMissionTrip)} placeholder='Maximum of 300 words' required></textarea>
                     </div>
 
                     <div className='paragraph'>
                         <label>Have you ever lived in another country? If yes, briefly explain.</label>
-                        <textarea name="" id="" cols="63" rows="5" value={livingAbroad} onChange={(e) => handleTextareaChange(e, setLivingAbroad)} placeholder='Maximum of 300 words' required></textarea>
+                        <textarea name="Living-abroad" id="" cols="63" rows="5" value={livingAbroad} onChange={(e) => handleTextareaChange(e, setLivingAbroad)} placeholder='Maximum of 300 words' required></textarea>
                     </div>
 
                     <div className='field'>
                         <i className='fas fa-plus' onClick={handleAddLanguage}></i>
-                        <p>Use '+' to add languages</p>
+                        
                         {languages.map((language) => (
                         <div key={language.id}>
                             <div className='sub-fields'>
-                                <label htmlFor="">Foreign Language Spoken</label>
-                                <input type="text" name='language' placeholder='Enter language' value={language.language} onChange={(e) => handleLanguageChange(language.id, e.target.value)} required />
+                                <label>Foreign Language Spoken</label>
+                                <input type="text" name='Language' placeholder='Enter language' value={language.language} onChange={(e) => handleLanguageChange(language.id, e.target.value)} required />
                             </div>
                             <div className='sub-fields'>
                                 <label htmlFor="">Level of proficiency</label>
-                                <select value={language.proficiency} onChange={(e) => handleProficiencyChange(language.id, e.target.value)}  required >
+                                <select name='Level-of-proficiency' value={language.proficiency} onChange={(e) => handleProficiencyChange(language.id, e.target.value)}  required >
                                     <option value="">--Select Proficiency--</option>
                                     <option value="Beginner">Beginner</option>
                                     <option value="Intermediate">Intermediate</option>
@@ -201,12 +230,12 @@ function Application_Form_3() {
  
                     <div className='field'>
                         <label htmlFor="">Signature</label>
-                        <input type="text" name="" id="" placeholder='Type full name' required />
+                        <input type="text" name="Agreement-signature" id="" placeholder='Type full name' required />
                     </div>
 
                     <div className='field'>
                         <label htmlFor="">Date</label>
-                        <input type="date" name="" id="" placeholder='mm/dd/yyyy'  max="9999-12-31" required/>
+                        <input type="date" name="Agreement-date" id="" placeholder='mm/dd/yyyy'  max="9999-12-31" required/>
                     </div>
 
                     <div className='field'>

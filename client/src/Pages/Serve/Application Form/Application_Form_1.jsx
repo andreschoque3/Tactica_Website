@@ -6,6 +6,7 @@ import Navbar from '../../../Components/Navbar/Navbar'
 import Footer from '../../../Components/Footer/Footer'
 import { toast } from 'react-toastify';
 
+
 const Application_Form_1 = () => {
 
   // browser tab title
@@ -33,7 +34,6 @@ const Application_Form_1 = () => {
   }
 
   // POST request to google sheet
-
   const scriptURL = 'https://script.google.com/macros/s/AKfycbwspzw4WYSmJdAWbWbenI436Qj08juBok6jdmkXwWNgpRJgJrFFQ6sMoXw7IH9B2K5H/exec';
 
   const handleSubmit = async (e) => {
