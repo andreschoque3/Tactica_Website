@@ -35,7 +35,7 @@ const Application_Form_2 = () => {
             <h1>Application Form</h1>
             <hr />
 
-            <form action="2">
+            <form action="#">
 
               <div className='details-block'>
                 <h2>Church Details</h2>
