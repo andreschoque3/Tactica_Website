@@ -20,7 +20,7 @@ const Blog_5 = () => {
 
       <div className='blog-container'>
           <h1>Tactical Medicine & the Gospel for Paramedics</h1>
-          <h5>TACTICA Ministries | Date Unknown</h5>
+          <h5>TACTICA Ministries | Oct. 2023</h5>
           <img src={BlogPic5_1} alt="Tactical Medicine & the Gospel for Paramedics" />
 
           <p>TACTICA Force Multiplier partners recently provided training at the university for new paramedics. A family of different churches were represented on the team. One of the 

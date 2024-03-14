@@ -1,48 +1,79 @@
-import React, {useEffect} from 'react'
+import React, { useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import './Blog_post.css'
 import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
-import BlogPic8 from './Images/blog-article-8.jpg'
+import BlogPic2 from './Images/blog-article-7.png'
 
 const Blog_8 = () => {
 
   // browser tab title
   useEffect(() => {
-    document.title = 'Blog: Summary of a recent Conversation: Burnout is real';
+    document.title = 'Blog: Baptist Church Honors Law Enforcement';
   }, []);
 
   return (
-    <div className='blog-article-8'>
-      
+    <div className='blog-post-1'>
+
       <Navbar/>
 
       <div className='blog-container'>
-        <h1>Summary of a recent conversation: Burnout is real</h1>
-        <h5>TACTICA Ministries | Date Unknown</h5>
-        <img src={BlogPic8} alt="Summary of a recent conversation: burnout is real" className='smaller-img' />
+        <h1>Police Force, Faith Intertwine As Portages Berean Baptist Church Honors Law Enforcement</h1>
+        <h5>TACTICA Ministries | Oct. 2009</h5>
+        <img src={BlogPic2} alt="Police Force Faith Intertwine as Portage Bearean Baptist Church Honors Law Enforcement"></img>
 
-        <p>Toxic but common lies-</p>
+        <p className='bold'>PORTAGE — More than 40 men and women who help make society a safer place were the focus of attention Sunday at Berean Baptist Church.</p>
 
-        <p>Big boys don’t cry.</p>
-
-        <p>Real men are not emotional.</p>
-
-        <p>If you “feel” the wrong thing, you are defective.</p>
-
-        <p>Censor who you are before you go out there.</p>
-
-        <p>UGH. Success and applause and achievements are not what make us worthy. They are not our identity.</p>
-
-        <p>Learning to live not superglued to what others think and expect of us is ROUGH ROAD for a lot of people… and this particular career is a HOT SPOT for burnout and the victory-less life.</p>
-
-        <p>We spend hours just being someone’s lightning rod. Our conversations involve a clear warning: if you don’t hit pause, you lose your life. Figuratively, if not literally.</p>
-
-        <p>Breathe in life-giving things like a date with your wife and ice-cream with your little girl. Stop and talk to Jesus and take a motorcycle ride by yourself. Be fiercely protective 
-          of your quiet time with just you and your Bible & your Father.
+        <p>Thirteen law-enforcement departments, including seven members from Costa Rica’s National Police Force, were represented during the 
+          morning worship overseen by Pastor Steve Nichols. Afterward, the officers were the guests of honor at a churchwide luncheon.
         </p>
 
-        <p><strong>Stop. Refuel. Reboot.</strong> Stop for that oil change and gas, or you will find yourself in the hospital, at best. The abundant life exists but you are not tasting it right now, brother.</p>
+        <p>Nichols said every Sunday service is special, but this one was unique in its own way.</p>
+
+        <p className='italics'>“Police officers, because of their line of work and the potential dangers they may face every day, need every source of protection 
+          they can get,” Nichols said. “Those here today came on their own, they came because of their faith and belief in Christ.”
+        </p>
+
+        <p>John A. Lacko | Special to Kalamazoo Gazette Ryan Rought, a SWAT police officer from Montague, spoke during the Berean Baptist Church’s
+          “International Law Enforcement and Appreciation Service” Sunday morning to honor local and Costa Rican law enforcement guests.
+        </p>
+
+        <p>The focus of Sunday’s service and recognition was the result of the efforts of former Kalamazoo Department of Public Safety Sgt. Ryan Rought.</p>
+
+        <p>Since December 2006, the 36-year-old Rought and his wife and two children have lived in Costa Rica after becoming missionaries through the 
+          Association of Baptists for World Evangelism. The Harrisburg, Pa.,-based independent mission agency draws people from all walks of life, and 
+          Rought was able to parlay his religious convictions with his military and law-enforcement experience to earn a respected place in Costa Rica’s 
+          9,000-member National Police Force — and still effectively spread the gospel.
+        </p>
+
+        <p>For a one-week period three times a year, Rought conducts training exercises in special weapons and tactics for a group of about 80 members of 
+          Costa Rica’s National Police Force.
+        </p>
+
+        <p>He said he wanted to do something different for this month’s training by bringing seven of the members to Kalamazoo.</p>
+
+        <p>The seven joined tactical officers from the Kalamazoo Department of Public Safety for a weeklong SWAT training session that concluded Friday 
+          on the 8,000-acre wooded property at Fort Custer Training Center in Augusta.
+        </p>
+
+        <p>The seven Costa Rica officers — five from its SWAT team, and one each from its criminal investigations and airport authority units — were 
+          chosen for the one-week training in the United States not only for their outstanding work in the force but also because of their strong 
+          religious beliefs.
+        </p>
+
+        <p>Nichols said he has enjoyed spending time with the seven and is impressed with their religious devotion.</p>
+
+        <p className='italics'>“I look at these seven commando guys esteemed in their (occupational) position who look death in the face every day and it’s clear that 
+          Christianity is not for sissies,” he said.
+        </p>
+
+        <p>Rought said the law-enforcement personnel who attended are strong believers in Christ that he has worked with or befriended at some point 
+          in his career.
+        </p>
+
+        <p className='italics'>“I made calls when we got back to Michigan a few weeks ago to let these Christian brothers and sisters know what the church was offering 
+          to do for us,” he said. “I’m not surprised so many showed up … It’s great, and this was a first-class service here today.”
+        </p>
 
         <Link className='back-btn' to="/Blog">Back</Link>
 

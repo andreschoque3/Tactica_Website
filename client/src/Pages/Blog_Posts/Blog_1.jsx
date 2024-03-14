@@ -1,86 +1,85 @@
-import React, { useEffect} from 'react'
+import React, {useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import './Blog_post.css'
 import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
-import BlogPic1 from './Images/blog-article-1.png'
+import BlogPic1 from './Images/blog-article-1.jpg'
 
-const Blog_1 = () => {
+function Blog_1() {
+
+  // click functionality for link
+  const handleLink = () => {
+    const abcUrl = 'https://abc7.com/la-county-sheriffs-department-lasd-deputies-suicide/14024417/?fbclid=IwAR0pEjDytV_LdhX-BMW6O3LI1QglStTduriJC3EI8GXUuc7FEWpLF_2-dQY#loqhz5rie444tsuwdz'
+
+    window.open(abcUrl, '_blank')
+  }
 
   // browser tab title
   useEffect(() => {
-    document.title = 'Blog: Baptist Church Honors Law Enforcement';
+    document.title = 'Blog: Burdened for those Silently Suffering in the Public Safety Community';
   }, []);
 
   return (
-    <div className='blog-post-1'>
+    <div className='blog-article-7'>
 
       <Navbar/>
 
-      <div className='blog-container'>
-        <h1>Police Force, Faith Intertwine As Portages Berean Baptist Church Honors Law Enforcement</h1>
-        <h5>TACTICA Ministries | Oct. 4, 2017</h5>
-        <img src={BlogPic1} alt="Police Force Faith Intertwine as Portage Bearean Baptist Church Honors Law Enforcement"></img>
+        <div className='blog-container'>
+          <h1>Burdened for those Silently Suffering in the Public Safety Community</h1>
+          <h5>TACTICA Ministries | Jan. 2024</h5>
 
-        <p className='bold'>PORTAGE — More than 40 men and women who help make society a safer place were the focus of attention Sunday at Berean Baptist Church.</p>
+          <p>Headlines across the country remind us that the weight, stress, and trauma of the public safety career are aspects we absolutely cannot overlook.</p>
 
-        <p>Thirteen law-enforcement departments, including seven members from Costa Rica’s National Police Force, were represented during the 
-          morning worship overseen by Pastor Steve Nichols. Afterward, the officers were the guests of honor at a churchwide luncheon.
-        </p>
+          <p> <a href="" onClick={handleLink}>Link to ABC 7's latest news on LASD officers</a>.</p>
 
-        <p>Nichols said every Sunday service is special, but this one was unique in its own way.</p>
+          <p>TACTICA Ministries has written a devotional for the public safety community, “My Tactical Time with God.” The book is used regularly in small group 
+            setting during our tactical & evangelistic outreaches. It is a very effective tool which brings many officers into God’s Word through its practical 
+            and real-world life applications. Here is an excerpt from a reflection about how God is undeterred by our failures.
+          </p>
 
-        <p className='italics'>“Police officers, because of their line of work and the potential dangers they may face every day, need every source of protection 
-          they can get,” Nichols said. “Those here today came on their own, they came because of their faith and belief in Christ.”
-        </p>
+          <img src={BlogPic1} alt="My Tactical Time with God" className='second-pic-blog' />
 
-        <p>John A. Lacko | Special to Kalamazoo GazetteRyan Rought, a SWAT police officer from Montague, spoke during the Berean Baptist Church’s
-          “International Law Enforcement and Appreciation Service” Sunday morning to honor local and Costa Rican law enforcement guests.
-        </p>
+          <p className='bold'>God is Undeterred by Your Failures</p>
 
-        <p>The focus of Sunday’s service and recognition was the result of the efforts of former Kalamazoo Department of Public Safety Sgt. Ryan Rought.</p>
+          <p><strong>1 Samuel 16:7</strong> But the LORD said to Samuel, “Do not look at his appearance or his stature, because I have rejected him. Man does not see what the LORD 
+            sees, for man sees what is visible, but the LORD sees the heart.” (HCSB)
+          </p>
 
-        <p>Since December 2006, the 36-year-old Rought and his wife and two children have lived in Costa Rica after becoming missionaries through the 
-          Association of Baptists for World Evangelism. The Harrisburg, Pa.,-based independent mission agency draws people from all walks of life, and 
-          Rought was able to parlay his religious convictions with his military and law-enforcement experience to earn a respected place in Costa Rica’s 
-          9,000-member National Police Force — and still effectively spread the gospel.
-        </p>
+          <p>Appearances can be deceiving. The outward appearance doesn’t reveal what people are really like. Physical looks don’t show us a person’s value or character or integrity 
+            or faithfulness to God. Outward qualities are, by definition, superficial. Moral and spiritual considerations are far more important to God.
+          </p>
 
-        <p>For a one-week period three times a year, Rought conducts training exercises in special weapons and tactics for a group of about 80 members of 
-          Costa Rica’s National Police Force.
-        </p>
+          <p>To everyone who saw him, Judas Iscariot looked like a faithful disciple, but his appearance was deceiving. The other disciples had no idea of what was going on inside 
+            Judas. Jesus was the only one who knew Judas’s heart: “Have I not chosen you, the Twelve? Yet one of you is a devil!” (John 6:70). God’s perspective is higher, deeper, 
+            and wiser than ours.
+          </p>
 
-        <p>He said he wanted to do something different for this month’s training by bringing seven of the members to Kalamazoo.</p>
+          <p>The fact that God chooses to use broken people to help accomplish His perfect will is an illustration of grace rather than ignorance. When Jesus called the disciples, 
+            He chose to lead a team of broken leaders. There is no such thing as a leader who will never fail. In their own personal failures, the disciples learned that all people 
+            are broken but for the spiritual transformation that Jesus brings.
+          </p>
 
-        <p>The seven joined tactical officers from the Kalamazoo Department of Public Safety for a weeklong SWAT training session that concluded Friday 
-          on the 8,000-acre wooded property at Fort Custer Training Center in Augusta.
-        </p>
+          <p>God has opened up His salvation to anyone. Salvation is available to you regardless of your bank account, the kind of car you drive, the degree you have, regardless 
+            of how politically correct or incorrect you are, and regardless of what your parents told you. Regardless of your failures, your mess, and your embarrassing history... 
+            God loves you.
+          </p>
 
-        <p>The seven Costa Rica officers — five from its SWAT team, and one each from its criminal investigations and airport authority units — were 
-          chosen for the one-week training in the United States not only for their outstanding work in the force but also because of their strong 
-          religious beliefs.
-        </p>
+          <p>God loves. God loves deep. God loves big. And God loves you despite you.</p>
 
-        <p>Nichols said he has enjoyed spending time with the seven and is impressed with their religious devotion.</p>
+          <p>Despite all the crud you bring to the table, God loves. John 3:16 gives us that promise. God loves you, undeterred by your failures and weaknesses. God wants you to 
+            know right now that you are loved and valued by Him. He so deeply wants you to know that He is not distant from you; but rather, God is working in your midst to lead 
+            you to abundant joy, peace, and life.
+          </p>
 
-        <p className='italics'>“I look at these seven commando guys esteemed in their (occupational) position who look death in the face every day and it’s clear that 
-          Christianity is not for sissies,” he said.
-        </p>
+          <p>You are not worthless. God knocks on the door of your heart, calling you to come to Christ. Jesus said, “Whoever comes to me I will never drive away” (John 6:37b, ESV).</p>
 
-        <p>Rought said the law-enforcement personnel who attended are strong believers in Christ that he has worked with or befriended at some point 
-          in his career.
-        </p>
+          <p><strong>John 3:16</strong> For God loved the world in this way: He gave His One and Only Son, so that everyone who believes in Him will not perish but have eternal life. (CSB)</p>
 
-        <p className='italics'>“I made calls when we got back to Michigan a few weeks ago to let these Christian brothers and sisters know what the church was offering 
-          to do for us,” he said. “I’m not surprised so many showed up … It’s great, and this was a first-class service here today.”
-        </p>
+          <Link className='back-btn' to="/Blog">Back</Link>
 
-        <Link className='back-btn' to="/Blog">Back</Link>
-
-      </div>
+        </div>
 
       <Footer/>
-      
     </div>
   )
 }
