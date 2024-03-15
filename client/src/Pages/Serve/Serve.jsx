@@ -20,8 +20,8 @@ const Serve = () => {
       <div className='text-box-sv'>
         <h1 className='sv-h1'>How to Serve in the Ministry</h1>
         <Link to='/Application-Form-page-1' className='btn-sv-1'>Application Form</Link>
-        <Link>Spouse Form</Link>
-        <Link>Pastor Form</Link>
+        <Link to='/Spouse-Form' className='btn-sv-2'>Spouse Form</Link>
+        <Link to='/Pastor-Form' className='btn-sv-3'>Pastor Form</Link>
       </div>
     </section>
 

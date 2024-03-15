@@ -11,6 +11,8 @@ import artPic5 from './Images/article-pic5.jpg'
 import artPic6 from './Images/article-pic6.png'
 import artPic7 from './Images/article-pic7.png'
 import artPic8 from './Images/article-pic8.png'
+import {toast} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 const Blog = () => {
 
@@ -37,6 +39,36 @@ const Blog = () => {
     setShowExtraBlogs(false);
   };
 
+  // Email functionality
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "efae9b3c-bf15-4bd7-91ed-ff9435feb4d9"); //andres: efae9b3c-bf15-4bd7-91ed-ff9435feb4d9  //tactica a517fe6f-3adc-4cd6-9b6c-04d38f98b600
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      console.log("Success", res);
+      toast.success("Email successfully sent.")
+      event.target.reset();
+    }
+    else {
+      console.log("Error", res)
+      toast.error("Error while sending email.")
+    }
+  };
+
   return (
   <div className='blog=pg'>
 
@@ -54,8 +86,10 @@ const Blog = () => {
       <p>You will receive notifications when we post new content</p>
 
       <div className='form-box'>
-        <input type="text" name='EmailAddress' placeholder='Enter your email' />
+        <form action="" onSubmit={onSubmit}>
+        <input type="text" name='Email-for-TACTICA-news' placeholder='Enter your email' style={{background: 'white'}} />
         <button type='submit'>Submit</button>
+        </form>
       </div>
     </section>
 

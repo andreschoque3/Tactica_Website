@@ -218,9 +218,8 @@ function Spouse_Form() {
                 </div>
               </div>
 
-              <button type='submit' className='form-btn-1'>Save</button>
-              <Link className='form-btn-3' to='/Application-Form-page-4'>Back</Link>
-              <Link className='form-btn-2' to='/Pastor-Form'>Next</Link>
+              <button type='submit' className='form-btn-1'>Save</button> 
+              <button className='form-btn-2'>PDF <i className='fas fa-file-arrow-down'></i></button>
 
             </form>
         </div>

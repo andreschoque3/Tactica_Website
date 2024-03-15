@@ -67,7 +67,7 @@ function Home() {
       
       <section className='header-sect'>
         <div className='text box'>
-          <h1 className='title-hm'>Training Heroes for Christ in the Public Safety Community</h1>
+          <h1 className='title-hm'>Training Heroes for Christ in the Public Safety <br /> Community</h1>
           <Link to="/Serve" className='btn1'>Get Started</Link>
           <Link to="/Give" className='btn2'>Give Today</Link>
         </div>

@@ -216,7 +216,6 @@ function Pastor_Form() {
               </div>
 
               <button type='submit' className='form-btn-1'>Save</button>
-              <Link className='form-btn-3' to='/Spouse-Form'>Back</Link>
               <button className='form-btn-2'>PDF <i className='fas fa-file-arrow-down'></i></button>
 
             </form>

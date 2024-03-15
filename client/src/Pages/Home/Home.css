@@ -4,7 +4,7 @@
     min-height: 100vh;
     width: 100%;
     background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
-    url(./home.jpeg);
+    url(./Images/home.jpeg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -13,12 +13,8 @@
 .title-hm {
     font-size: 55px;
     font-weight: 600;
-    width: 90%;
+    padding-top: 14%;
     color: white;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, 50%);
     text-align: center;
 }
 
@@ -30,10 +26,9 @@
     border-radius: 500px;
     padding: 20px 45px;
     font-size: 20px;
-    top: 52%;
-    left: 34%;
+    margin-top: 2%;
+    margin-left: 34%;
     background: transparent;
-    position: absolute;
     cursor: pointer;
 }
 
@@ -50,12 +45,12 @@
     border: 1px solid #fff;
     border-radius: 500px;
     padding: 20px 45px;
-    top: 52%;
-    left: 54%;
+    font-size: 20px;
+    margin-top: 2%;
+    margin-left: 8%;
     background: transparent;
     position: absolute;
     cursor: pointer;
-    font-size: 20px;
 }
 
 .btn2:hover {
@@ -74,217 +69,195 @@
   }
 
  .core-cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
  }
 
  .card {
-  width: 325px;
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: gray;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-  margin: 20px;
-  transition: 0.5s ease;
-  cursor: pointer;
+    width: 325px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: gray;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    transition: 0.5s ease;
+    cursor: pointer;
  }
 
  .card img {
-  width: 100%;
-  height: 50%;
+    width: 100%;
+    height: 50%;
  }
 
  .core-cards h2 {
-  font-size: 30px;
-  margin-bottom: 15px;
-  margin-top: 15px;
-  text-align: center;
-  color: white;
+    font-size: 30px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    text-align: center;
+    color: white;
  }
 
 .core-cards p {
-  color: white;
-  font-size: 20px;
-  padding: 8px 16px;
-  border-radius: 4px;
-  text-align: center;
+    color: white;
+    font-size: 20px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-align: center;
 }
 
 .card:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .btn {
-  display: inline-block;
-  text-decoration: none;
-  color: black;
-  border: 1px solid black;
-  border-radius: 500px;
-  padding: 20px 45px;
-  font-size: 20px;
-  cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    border-radius: 500px;
+    padding: 20px 45px;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 .btn:hover {
-  border: 1px solid black;
-  background: black;
-  transition: 1s;
-  color: #fff;
+    border: 1px solid black;
+    background: black;
+    transition: 1s;
+    color: #fff;
 }
 
 .btn-cls {
-  padding-top: 20px;
-  padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 40px;
 }
 
 /****** Videos Section ******/
 
 .title-vids {
-  text-align: center;
-  font-size: 35px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+    text-align: center;
+    font-size: 35px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .video-carousel {
-  width: 80%;
-  margin: 0 auto;
-  padding-bottom: 50px; 
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 50px; 
 }
 
 .fa-arrow-right {
-  position: absolute;
-  color: black; 
-  font-size: 24px; 
-  margin-left: 30px;
+    position: absolute;
+    color: black; 
+    font-size: 24px; 
+    margin-left: 30px;
 }
 
 .fa-arrow-left {
-  position: absolute;
-  color: black; 
-  font-size: 24px; 
-  margin-left: -70px;
+    position: absolute;
+    color: black; 
+    font-size: 24px; 
+    margin-left: -70px;
 }
 
 .video-element {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 
 .slick-dots li button {
-  width: 12px;
-  height: 12px; 
-  border-radius: 50%; 
-  background-color: #ccc; 
+    width: 12px;
+    height: 12px; 
+    border-radius: 50%; 
+    background-color: #ccc; 
 }
-
 
 
 /****** Responsiveness ******/
 
 @media screen and (min-width:1600px) and (max-width: 4000px) {
   .title-hm {
-    top: 25%;
+    padding-top: 12%;
+  }
+
+  .btn1 {
+    margin-left: 35%;
+  }
+
+  .btn2 {
+   margin-left: 10%;
   }
 
   .btn-cls{
     position: absolute;
-    margin-top: 460px;
+    margin-top: 25%;
   }
 
-  .btn1, .btn2 {
-    top: 45%;
-  }
-  
   .tactica-vids {
-    margin-top: 140px;
+    margin-top: 12%;
   }
-
-  .title-vids h1 {
-    bottom: -124%;
-    left: 32%;
-  }
-
-  .arrows {
-    bottom: -140%;
-    width: 55%;
-    left: 22%;
-  }
-
-  .dot-list {
-    bottom: -180%;
-    left: 43%;
-
-  }
-
 }
 
 @media screen and (max-width: 800px) {
-
   .header-sect {
     min-height: 70vh;
   }
 
   .title-hm {
-    font-size: 25px;
-    left: 49%;
-    margin-top: 15%;
+    font-size: 35px;
+    padding-top: 40%;
+    width: 90%;
+    padding-left: 10%;
   }
 
   .btn1 {
-    padding: 15px 25px;
+    margin-left: 6%;
+    padding: 15px 35px;
     font-size: 15px;
-    left: 10%;
-    top: 52%;
+    margin-top: 10%;
   }
 
   .btn2 {
-    padding: 15px 25px;
+    padding: 15px 35px;
     font-size: 15px;
-    top: 52%;
+    margin-left: 12%;
+    margin-top: 10%;
   }
 
   .core-vals-h1 {
-    font-size: 35px;
+    font-size: 40px;
   }
 
   .core-cards h2 {
-    font-size: 25px;
+    font-size: 30px;
   }
 
   .core-cards p {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .btn {
-    padding: 15px 25px;
+    padding: 15px 35px;
     font-size: 15px;
-  }
-
-  .arrows {
-    bottom: -230%;
-    width: 80%;
-    left: 10%;
-  }
-
-  .dot-list {
-    bottom: -250%;
-    left: 20%;
   }
 
   .title-vids h1 {
     font-size: 35px;
     text-align: center;
-    bottom: -220%;
-    left: 0%;
-    
   }
 
-  .picture, .slider {
-    height: 400px;
+  .fa-arrow-right { 
+    margin-left: -65%;
+    font-size: 20px;
+  }
+
+  .fa-arrow-left {
+    margin-left: -130%;
+    font-size: 20px;
   }
 
 }

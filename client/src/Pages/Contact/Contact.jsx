@@ -12,11 +12,12 @@ const Contact = () => {
     document.title = 'Contact Us';
   }, []);
 
+  // Email functionality
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "a517fe6f-3adc-4cd6-9b6c-04d38f98b600"); //andres: efae9b3c-bf15-4bd7-91ed-ff9435feb4d9
+    formData.append("access_key", "efae9b3c-bf15-4bd7-91ed-ff9435feb4d9"); //andres: efae9b3c-bf15-4bd7-91ed-ff9435feb4d9 //tactica a517fe6f-3adc-4cd6-9b6c-04d38f98b600
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
@@ -33,6 +34,7 @@ const Contact = () => {
     if (res.success) {
       console.log("Success", res);
       toast.success("Email successfully sent.")
+      event.target.reset();
     }
     else {
       console.log("Error", res)
